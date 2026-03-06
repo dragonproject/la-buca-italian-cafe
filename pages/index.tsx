@@ -2,10 +2,13 @@ import Map from "@/components/Map";
 import Review from "@/components/Review";
 import Link from "next/link";
 import Image from "next/image";
+// framer-motion: アニメーションを簡単に実装できるライブラリ
 import { motion, AnimatePresence } from "framer-motion";
+// Reactの標準Hooks: 状態管理(useState)と副作用実行(useEffect)
 import { useState, useEffect } from "react";
 
 const Home = () => {
+  // カルーセル（背景画像）のインデックス管理。0から順に画像が切り替わる
   const [index, setIndex] = useState(0);
   const images = [
     "/images/toppageimage01.jpg",
@@ -15,17 +18,21 @@ const Home = () => {
     "/images/menupageimage01.jpg",
   ];
 
+  // コンポーネントが描画された後に実行される処理
   useEffect(() => {
+    // 5秒ごとにカルーセルのインデックスを更新するタイマー
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
     }, 5000);
+    // コンポーネントが消える（アンマウント）時にタイマーを解除してメモリ漏れを防ぐ
     return () => clearInterval(timer);
   }, [images.length]);
 
   return (
     <article className="overflow-x-hidden selection:bg-[#f39200]/30 text-stone-100">
+      {/* ヒーローセクション：Webサイトの最上部、最初に目が触れるエリア */}
       <section className="min-h-screen relative flex justify-center items-center px-4 overflow-hidden">
-        {/* Carousel Background */}
+        {/* 背景カルーセル：画像がふわっと切り替わる仕組み */}
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait">
             <motion.div
@@ -45,11 +52,12 @@ const Home = () => {
               />
             </motion.div>
           </AnimatePresence>
-          {/* Overlay to darken and add depth */}
+          {/* オーバーレイ：画像を暗くして上に乗る文字を読みやすくする */}
           <div className="absolute inset-0 bg-stone-950/60 z-[1]" />
           <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-stone-950 to-transparent z-[2]" />
         </div>
 
+        {/* センターコンテンツ：ロゴやメインキャッチコピー */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -57,6 +65,7 @@ const Home = () => {
           className="w-full max-w-2xl bg-stone-900/70 backdrop-blur-3xl px-10 py-20 flex flex-col justify-center items-center shadow-[0_0_100px_rgba(0,0,0,0.5)] rounded-[3rem] z-10 text-center border border-white/10"
         >
           <span className="handwritten text-[#f39200] text-3xl mb-4 italic">Benvenuti</span>
+          {/* ロゴ：丸み(rounded)とブレンディング(mix-blend)で洗練された印象に */}
           <div className="relative mb-10 mix-blend-lighten drop-shadow-2xl shadow-2xl overflow-hidden rounded-[10px] bg-black">
             <Image src="/logo.jpg" alt="La Buca Logo" width={256} height={141} />
           </div>
@@ -64,6 +73,7 @@ const Home = () => {
           <p className="text-xl md:text-2xl font-light tracking-[0.4em] uppercase text-stone-100 mb-2">
             三田の街角、手作りの温もり。
           </p>
+          {/* アクションボタン：ユーザーを特定ページへ誘導 */}
           <div className="flex flex-col sm:flex-row gap-6 w-full max-w-md">
             <motion.a
               href="#story"
@@ -84,7 +94,7 @@ const Home = () => {
           </div>
         </motion.div>
 
-        {/* Scroll Indicator */}
+        {/* スクロールインジケーター：下にコンテンツがあることを伝える補助パーツ */}
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
@@ -95,7 +105,7 @@ const Home = () => {
         </motion.div>
       </section>
 
-      {/* Philosophy Section - Warmth Addition */}
+      {/* Philosophy Section: お店の想いや歴史を伝えるセクション */}
       <section id="story" className="warm-bg py-32 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
           <motion.div
@@ -226,7 +236,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-gradient-to-b from-stone-950 via-stone-900 to-black relative py-32 z-10 overflow-hidden">
+      <section id="reviews" className="bg-gradient-to-b from-stone-950 via-stone-900 to-black relative py-32 z-10 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[#f39200]/5 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-6 text-center">

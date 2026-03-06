@@ -58,6 +58,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
         <nav id="nav" className='opacity-0 scale-y-0 absolute flex flex-col items-center top-full left-0 right-0 bg-stone-900/95 py-10 transition-all duration-300 origin-top shadow-2xl md:static md:opacity-100 md:scale-y-100 md:flex-row md:gap-12 md:py-0 md:bg-transparent md:shadow-none'>
           <Link href="/menu" className="nav-link">メニュー</Link>
+          <Link href="/#reviews" className="nav-link">お客様の声</Link>
           <Link href="/catering" className="nav-link">ケータリング</Link>
           <Link href="/contact" className="nav-link text-[#f39200] font-bold border border-[#f39200]/30 px-6 py-2 rounded-full hover:bg-[#f39200] hover:text-stone-950 transition-all">ご予約・店舗案内</Link>
         </nav>
@@ -88,6 +89,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
           <div className="flex flex-col items-center md:items-end space-y-5 text-lg">
             <Link href="/menu" className="hover:text-white transition-colors">メニュー</Link>
+            <Link href="/#reviews" className="hover:text-white transition-colors">お客様の声</Link>
             <Link href="/contact" className="hover:text-white transition-colors">店舗情報</Link>
             <Link href="/catering" className="hover:text-white transition-colors">ケータリング</Link>
           </div>
