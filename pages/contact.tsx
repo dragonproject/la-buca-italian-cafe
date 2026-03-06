@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <article className="p-8 min-h-[75vh] max-w-6xl mx-auto pt-24">
       <div className="text-center mb-20">
-        <h1 className="text-6xl mb-6 font-bold">お問い合わせ</h1>
+        <h1 className="text-[clamp(2.5rem,10vw,5rem)] mb-6 font-bold tracking-tighter">お問い合わせ</h1>
         <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16 text-xl text-slate-400 font-light">
           <p>お電話: <Link className="text-[#f39200] hover:text-[#d98300] transition-colors font-medium" href="tel:0312345678">03-1234-5678</Link></p>
           <p>メール: <Link className="text-[#f39200] hover:text-[#d98300] transition-colors font-medium" href="mailto:info@labuca.jp">info@labuca.jp</Link></p>

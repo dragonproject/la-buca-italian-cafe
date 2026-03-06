@@ -134,7 +134,7 @@ const Home = () => {
             className="warm-text"
           >
             <span className="handwritten text-[#f39200] text-2xl mb-4 block">Our Philosophy</span>
-            <h2 className="text-5xl mb-8 leading-tight font-bold">手仕事の温もりを、<br />もっと身近に。</h2>
+            <h2 className="text-[clamp(2.5rem,10vw,5rem)] mb-8 leading-[1.2] font-bold tracking-tighter">手仕事の温もりを、<br />もっと身近に。</h2>
             <div className="space-y-6 text-lg leading-relaxed font-light opacity-90">
               <p>
                 三田の街角で、毎日通いたくなるような「気軽で元気が出る味」を目指しています。
@@ -160,7 +160,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[4fr_6fr] gap-24 items-center">
           <div className="space-y-8">
             <span className="handwritten text-[#f39200] text-2xl block">Find Us</span>
-            <h2 className="text-5xl !leading-[1.3] tracking-widest uppercase mb-12">
+            <h2 className="text-[clamp(2.5rem,10vw,5rem)] !leading-[1.2] tracking-tighter uppercase mb-12">
               三田で愛される<br /><span className="text-[#f39200]">街のイタリアン</span>
             </h2>
             <div className="space-y-4 text-lg font-light text-stone-400 leading-relaxed italic border-l-2 border-[#f39200]/30 pl-6 mb-12">
@@ -209,7 +209,7 @@ const Home = () => {
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-2xl">
               <span className="handwritten text-[#f39200] text-2xl mb-4 block">Signature Selection</span>
-              <h2 className="text-5xl mb-6">こだわりの <span className="text-[#f39200]">看板料理</span></h2>
+              <h2 className="text-[clamp(2.5rem,10vw,5rem)] mb-6 leading-[1.2] tracking-tighter">こだわりの <span className="text-[#f39200]">看板料理</span></h2>
               <p className="text-xl text-stone-400 font-light">地元の新鮮な食材と厳選された輸入品を使用し、シェフが心を込めて作り上げる伝統的なイタリア料理の数々をご堪能ください。</p>
             </div>
             <Link href="/menu" className="text-[#f39200] border-b border-[#f39200] pb-1 hover:text-white hover:border-white transition-all text-lg tracking-widest uppercase">全メニューを見る</Link>
@@ -251,7 +251,7 @@ const Home = () => {
 
         <div className="max-w-5xl mx-auto px-6 text-center">
           <span className="handwritten text-[#f39200] text-2xl mb-4 block">Testimonials</span>
-          <h2 className="text-5xl mb-24 italic">お客様の声</h2>
+          <h2 className="text-[clamp(2.5rem,10vw,5rem)] mb-24 italic tracking-tighter">お客様の声</h2>
           <div className="flex flex-col gap-16">
             <Review
               body="三田の路地裏にある、本当は教えたくない穴場のお店です。仕事終わりにふらっと寄って、自家製パスタとワインで一息つくのが毎週末の楽しみ。気取らないスタッフの方々との会話も心地よく、明日への元気がもらえます。"
