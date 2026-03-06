@@ -4,299 +4,300 @@ import { Tag, symbols } from "./MenuItem";
 const Food = () => {
   return (
     <section className="min-h-screen p-5">
-      {/* ---------- PRIMI ---------- */}
-      <h3 className="">Primi</h3>
+      {/* ---------- 前菜 (Primi) ---------- */}
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all hover:pl-8">前菜 (Primi)</h3>
       <MenuItem
-        name="Seasonal Pickled Vegetables"
-        description=""
-        price={7}
+        name="季節の自家製ピクルス"
+        description="旬のお野菜を自家製ピクルス液で漬け込みました"
+        price={700}
         tags={[Tag.gf, Tag.v, Tag.vegan]}
       />
       <MenuItem
-        name="Mediterranean Olives"
-        description="marinated in lemon garlic olve oil"
-        price={8}
+        name="地中海産オリーブ"
+        description="レモンとガーリック、オリーブオイルの特製マリネ"
+        price={800}
         tags={[Tag.gf, Tag.v, Tag.vegan]}
       />
       <MenuItem
-        name="Arancini"
-        description="stuffed with bolognese & fontina cheese served over marninara"
-        price={9}
+        name="アランチーニ"
+        description="ボロネーゼとフォンティーナチーズを詰め、マリナラソースを添えたライスコロッケ"
+        price={900}
         tags={[]}
       />
       <MenuItem
-        name="Carciofi"
-        description="artichoke, pomodoraccio tomato, herb and olive oil"
-        price={8}
+        name="アーティチョークのカルチョーフィ"
+        description="アーティチョーク、ドライトマト、ハーブのオリーブオイル和え"
+        price={800}
         tags={[Tag.gf, Tag.v, Tag.vegan]}
       />
       <MenuItem
-        name="Polpette"
-        description="grilled baguett, spicy meatballs, marinara, smoked mozzarella"
-        price={12}
+        name="ポルペッテ"
+        description="スパイシーミートボール、マリナラソース、スモークモッツァレラを添えたグリルバゲット"
+        price={1200}
         tags={[]}
       />
       <MenuItem
-        name="Calamari"
-        description="lightly dusted and fried, served with roasted pepper aioli*"
-        price={15}
+        name="カラマリ"
+        description="軽く揚げたイカのフライ、特製ローストペッパーアイオリソース添え"
+        price={1500}
         tags={[]}
       />
       <MenuItem
-        name="Olive Bruschetta"
-        description="kalamata olive tapenade"
-        price={11}
+        name="オリーブ・ブルスケッタ"
+        description="カラマタオリーブのタプナードソース"
+        price={1100}
         tags={[Tag.v, Tag.vegan]}
       />
       <MenuItem
-        name="Pomodoro Bruschetta"
-        description="tomato & roasted garlic"
-        price={11}
+        name="ポモドーロ・ブルスケッタ"
+        description="フレッシュトマトとローストガーリック"
+        price={1100}
         tags={[Tag.v, Tag.vegan]}
       />
       <MenuItem
-        name="Caprese Bruschetta"
-        description="tomato, fresh mozzarella & basil"
-        price={12}
+        name="カプレーゼ・ブルスケッタ"
+        description="トマト、フレッシュモッツァレラ、バジルのハーモニー"
+        price={1200}
         tags={[Tag.v]}
       />
 
-      {/* ---------- Insalate, Zuppa, & Contorni ---------- */}
-      <h3 className="">Insalate, Zuppa, & Contorni</h3>
+      {/* ---------- サラダ・スープ・サイドメニュー ---------- */}
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">サラダ・スープ・付け合わせ</h3>
       <MenuItem
-        name="Zuppa del Giorno"
+        name="本日のスープ"
         description=""
-        price={[8, 10]}
-        sizes={["cup", "bowl"]}
+        price={[800, 1000]}
+        sizes={["カップ", "ボウル"]}
         tags={[]}
       />
       <MenuItem
-        name="Verdi"
-        description="mixed greens and red onion tossed with olive oil and balsamic vinegar"
-        price={[9, 13]}
-        sizes={["small", "large"]}
+        name="ヴェルディ・サラダ"
+        description="ミックスグリーンとレッドオニオンをオリーブオイル、バルサミコ酢で"
+        price={[900, 1300]}
+        sizes={["小", "大"]}
         tags={[Tag.gf, Tag.v, Tag.vegan]}
       />
       <MenuItem
-        name="Spinaci"
-        description="baby spinach with tomatoes, lives and feta, lemon-infused olive oil and balsamic"
-        price={[10, 14]}
-        sizes={["small", "large"]}
+        name="スピナーチ・サラダ"
+        description="ほうれん草、トマト、オリーブ、フェタチーズ。レモンオリーブオイルとバルサミコ仕上げ"
+        price={[1000, 1400]}
+        sizes={["小", "大"]}
         tags={[Tag.gf, Tag.v, Tag.vegan]}
       />
       <MenuItem
-        name="Casesar"
-        description="romaine lettuce and croutons with an anchovy, garlic, lemon, parmesan aioli"
-        price={[10, 14]}
-        sizes={["small", "large"]}
+        name="シーザーサラダ"
+        description="ロメインレタスとクルトンに、アンチョビ・ニンニク・レモンの自家製アイオリソース"
+        price={[1000, 1400]}
+        sizes={["小", "大"]}
         tags={[]}
       />
       <MenuItem
-        name="Gorgonzola"
-        description="romaine lettuce, apple roasted walnuts, creamy gorgonzola dressing"
-        price={[10, 14]}
-        sizes={["small", "large"]}
+        name="ゴルゴンゾーラ・サラダ"
+        description="ロメインレタス、リンゴ、ローストくるみにクリーミーなゴルゴンゾーラドレッシング"
+        price={[1000, 1400]}
+        sizes={["小", "大"]}
         tags={[Tag.gf, Tag.v]}
       />
       <MenuItem
-        name="Mashed Potatoes"
-        description="topped with basil pesto"
-        price={8}
+        name="マッシュポテト"
+        description="バジルペーストをトッピング"
+        price={800}
         tags={[Tag.gf, Tag.v]}
       />
       <MenuItem
-        name="Sautè"
-        description="broccoli or seasonal vegetables with olive oil, garlic 
-              & lemon"
-        price={9}
+        name="旬の野菜のソテー"
+        description="ブロッコリーまたは季節の野菜をオリーブオイル、ガーリック、レモンでソテー"
+        price={900}
         tags={[Tag.gf, Tag.v, Tag.vegan]}
       />
 
-      {/* ---------- Pasta ---------- */}
-      <h3 className="">Pasta</h3>
+      {/* ---------- パスタ (Pasta) ---------- */}
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">パスタ (Pasta)</h3>
       <MenuItem
-        name="Alfredo"
-        description="linguinie tossed in a roasted garlic and parmesan cream sauce"
-        price={17}
+        name="アルフレード"
+        description="リングイネ：ローストガーリックとパルメザンチーズのクリームソース"
+        price={1700}
         tags={[Tag.v]}
       />
       <MenuItem
-        name="Pomodoro"
-        description="spaghetti tossed with a fresh basil and garlic tomato sauce"
-        price={14}
+        name="ポモドーロ"
+        description="スパゲッティ：フレッシュバジルとガーリックの風味豊かなトマトソース"
+        price={1400}
         tags={[Tag.v, Tag.vegan]}
       />
       <MenuItem
-        name="Pesto Basilica"
-        description="linguine, fresh basil, pine nutes, walnuts, garlic, parmesan, olive oil"
-        price={18}
+        name="ジェノベーゼ (Pesto Basilica)"
+        description="リングイネ：バジル、松の実、くるみ、ニンニク、パルメザンを贅沢に使った逸品"
+        price={1800}
         tags={[Tag.v]}
       />
       <MenuItem
-        name="Bolognese"
-        description="spaghetti with a heary beef & pork ragu"
-        price={19}
+        name="ボロネーゼ"
+        description="スパゲッティ：牛と豚をじっくり煮込んだコクのあるラグーソース"
+        price={1900}
         tags={[]}
       />
       <MenuItem
-        name="Puttanesca"
-        description="penne, roma tomatoes, olives, capers, garlic, red pepper, and a hint of anchovy"
-        price={17}
+        name="プッタネスカ"
+        description="ペンネ：トマト、オリーブ、ケッパー、アンチョビのアクセントが効いたピリ辛ソース"
+        price={1700}
         tags={[]}
       />
       <MenuItem
-        name="Vegetariana"
-        description="penne, roma tomatoes, broccoli, roasted yellow peppers, pine nut, garlic, lemon juice, pepper flakes, extra virgin olive oil"
-        price={18}
+        name="ベジタリアーナ"
+        description="ペンネ：カラフルな野菜と松の実をガーリックとオリーブオイルで"
+        price={1800}
         tags={[Tag.v, Tag.vegan]}
       />
       <MenuItem
-        name="Salmone Ubriaco"
-        description="spaghetti, vodka cream poached wil salmon, scallions*"
-        price={19}
+        name="サーモンのウォッカクリーム"
+        description="スパゲッティ：ウォッカとクリームで仕上げた天然サーモン。万能ネギの彩り"
+        price={1900}
         tags={[]}
       />
       <MenuItem
-        name="Lasagne"
-        description="beef & pork bolognese, rictta, bèchamel, mozzarella"
-        price={18}
+        name="ラザニア"
+        description="ボロネーゼ、リコッタ、ベシャメル、モッツァレラを重ねた伝統の味"
+        price={1800}
         tags={[]}
       />
       <MenuItem
-        name="Al Forno"
-        description="baked penne, mascarpone, mozzarella, parmesan, tomato sauce"
-        price={17}
+        name="アル・フォルノ"
+        description="ペンネのオーブン焼き：4種のチーズとトマトソースの絶妙なハーモニー"
+        price={1700}
         tags={[Tag.v]}
       />
       <MenuItem
-        name="Abituale"
-        description="penne, spicy italian sausage, parmesan & roasted garlic tomato cream sauce"
-        price={18}
+        name="アビチュアーレ"
+        description="ペンネ：ピリ辛のイタリアンソーセージとガーリック・トマトクリームソース"
+        price={1800}
         tags={[]}
       />
       <MenuItem
-        name="Pancetta e Funghi"
-        description="penne, pancetta, mushrooms, shallots, cream"
-        price={18}
+        name="パンチェッタとキノコのパスタ"
+        description="ペンネ：パンチェッタ、キノコ、エシャロットのクリーミーな仕立て"
+        price={1800}
         tags={[]}
       />
 
-      {/* ---------- Entrata ---------- */}
-      <h3 className="">Entrata</h3>
+      {/* ---------- メイン料理 (Entrata) ---------- */}
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">メイン料理 (Entrata)</h3>
       <MenuItem
-        name="Pollo Marsala"
-        description="lighly dusted chicken medallions, marsala wine sauce, and mushrooms, served with mashed potatoes "
-        price={20}
+        name="チキンのマルサラ"
+        description="鶏肉のメダリオンソテー、マルサラワインとキノコのソース。マッシュポテト添え"
+        price={2000}
         tags={[]}
       />
       <MenuItem
-        name="Polenta con Maiale"
-        description="slow roasted pork, caramelized onions, peas, parmesan plenta, sage chianti butter"
-        price={19}
+        name="豚肉のポレンタ添え"
+        description="じっくりローストしたポーク、パルメザンポレンタ。セージとキャンティのソース"
+        price={1900}
         tags={[Tag.gf]}
       />
       <MenuItem
-        name="Risotto Funghi e Verdure"
-        description="mushrooms, seasonal vegetables, parmesan"
-        price={19}
+        name="キノコと野菜のリゾット"
+        description="キノコ、季節の野菜、パルメザンチーズの贅沢なリゾット"
+        price={1900}
         tags={[Tag.v]}
       />
       <MenuItem
-        name="Bavette Steak 8oz"
-        description="mashed potatoes, blistered tomatoes, salsa di palermo*"
-        price={26}
+        name="バベットステーキ (約230g)"
+        description="カイノミのステーキ：マッシュポテト、ローストトマト添え"
+        price={2600}
         tags={[Tag.gf]}
       />
 
-      {/* ---------- Additions ---------- */}
-      <h3 className="">Additions</h3>
-      <p className="italic text-slate-400">May be added to any of our menu items.</p>
+      {/* ---------- 追加トッピング (Additions) ---------- */}
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-4 text-3xl font-bold mt-20">追加トッピング</h3>
+      <p className="italic text-stone-400 mb-8 pl-6 text-sm">※ 全てのメニューに追加いただけます</p>
       <div className="md:grid md:grid-cols-2 md:gap-x-24">
         <MenuItem
-          name="Add 8oz bavette steak*"
+          name="カイノミステーキの追加 (約230g)"
           description=""
-          price={13}
+          price={1300}
           tags={[]}
         />
         <MenuItem
-          name="Add roasted chicken breast"
+          name="ローストチキンの追加"
           description=""
-          price={7}
+          price={700}
           tags={[]}
         />
         <MenuItem
-          name="Add salmon*"
+          name="サーモンの追加"
           description=""
-          price={9}
+          price={900}
           tags={[]}
         />
         <MenuItem
-          name="Add prawns*"
+          name="海老の追加"
           description=""
-          price={9}
+          price={900}
           tags={[]}
         />
         <MenuItem
-          name="Add spicy italian sausage"
+          name="イタリアンソーセージの追加"
           description=""
-          price={7}
+          price={700}
           tags={[]}
         />
         <MenuItem
-          name="Add spicy meat balls"
+          name="ミートボールの追加"
           description=""
-          price={8}
+          price={800}
           tags={[]}
         />
         <MenuItem
-          name="Add prosciutto"
+          name="プロシュートの追加"
           description=""
-          price={4}
+          price={400}
           tags={[]}
         />
         <MenuItem
-          name="Add broccoli or seasonal veggies"
+          name="ブロッコリー・季節野菜の追加"
           description=""
-          price={6}
+          price={600}
           tags={[Tag.gf, Tag.v, Tag.vegan]}
         />
         <MenuItem
-          name="Add fresh mozzarella"
+          name="フレッシュモッツァレラの追加"
           description=""
-          price={4}
+          price={400}
           tags={[Tag.gf, Tag.v]}
         />
         <MenuItem
-          name="Substitute gnocchi or cheese ravioli"
+          name="ニョッキ/チーズラビオリに変更"
           description=""
-          price={4}
+          price={400}
           tags={[Tag.v]}
         />
         <MenuItem
-          name="Substitute gluten free penne"
+          name="グルテンフリーペンネに変更"
           description=""
-          price={4}
+          price={400}
           tags={[Tag.gf, Tag.v, Tag.vegan]}
         />
       </div>
-      <hr />
-      <div className="mt-6 flex flex-col gap-4">
-        <p>*Consuming raw or undercooked seafood, eggs, or meat may increase you risk of foodborn illness.</p>
-        <div className="flex gap-3">
-          {symbols["GLUTEN FREE"]}
-          <p>Gluten Free</p>
-        </div>
-        <div className="flex gap-3">
-          {symbols.VEGETARIAN}
-          <p>Vegetarian</p>
-        </div>
-        <div className="flex gap-3">
-          {symbols.VEGAN}
-          <p>Vegan</p>
+      <hr className="my-12 border-stone-800" />
+      <div className="mt-6 flex flex-col gap-6 text-sm text-stone-400">
+        <p>※ 生または加熱不十分な魚介類、卵、肉類の摂取は、食中毒のリスクを高める可能性があります。</p>
+        <div className="flex flex-wrap gap-x-12 gap-y-4">
+          <div className="flex items-center gap-3">
+            <span className="text-[#f39200]">{symbols["GLUTEN FREE"]}</span>
+            <p>グルテンフリー (Gluten Free)</p>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="text-[#f39200]">{symbols.VEGETARIAN}</span>
+            <p>ベジタリアン (Vegetarian)</p>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="text-[#f39200]">{symbols.VEGAN}</span>
+            <p>ヴィーガン (Vegan)</p>
+          </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default Food;

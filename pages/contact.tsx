@@ -3,31 +3,41 @@ import Link from "next/link";
 
 const Contact = () => {
   return (
-    <article className="p-5 min-h-[75vh] max-w-4xl mx-auto">
-      <h1 className="text-4xl">Get in touch!</h1>
-      <div className="mb-5">
-        <p>Call us at <Link className="underline" href="tel:5032381058">(503) 238-1058</Link></p>
-        <p>Email us at <Link className="underline" href="mailto:labucaeast@gmail.com">labucaeast@gmail.com</Link></p>
-        <p>Or <Link className="underline" href="https://www.google.com/maps/dir//''/@45.5235634,-122.7071369,12z/data=!4m9!4m8!1m0!1m5!1m1!1s0x5495a0bf3c5ffd61:0x5f17c2164bd045bf!2m2!1d-122.6371189!2d45.52348!3e3">get directions</Link> and drop on in!</p>
+    <article className="p-8 min-h-[75vh] max-w-6xl mx-auto pt-24">
+      <div className="text-center mb-20">
+        <h1 className="text-6xl mb-6 font-bold">お問い合わせ</h1>
+        <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16 text-xl text-slate-400 font-light">
+          <p>お電話: <Link className="text-[#f39200] hover:text-[#d98300] transition-colors font-medium" href="tel:0312345678">03-1234-5678</Link></p>
+          <p>メール: <Link className="text-[#f39200] hover:text-[#d98300] transition-colors font-medium" href="mailto:info@labuca.jp">info@labuca.jp</Link></p>
+        </div>
       </div>
-      <div className="mt-5 md:grid grid-cols-2 items-center">
-        <Map />
-        <div>
-          <h2 className="text-center">Hours</h2>
-          <div className="flex gap-3 justify-center">
-            <div className="flex flex-col justify-between">
-              <p className="text-right my-1 text-lg"><span className="font-bold">Monday</span>: 5:00 pm - 9:00 pm</p>
-              <p className="text-right my-1 text-lg"><span className="font-bold">Tuesday</span>: 5:00 pm - 9:00 pm</p>
-              <p className="text-right my-1 text-lg"><span className="font-bold">Wednesday</span>: 5:00 pm - 9:00 pm</p>
-              <p className="text-right my-1 text-lg"><span className="font-bold">Thursday</span>: 5:00 pm - 9:00 pm</p>
-              <p className="text-right my-1 text-lg"><span className="font-bold">Friday</span>: 5:00 pm - 10:00 pm</p>
-              <p className="text-right my-1 text-lg"><span className="font-bold">Saturday</span>: 5:00 pm - 9:30 pm</p>
-              <p className="text-right my-1 text-lg"><span className="font-bold">Sunday</span>: 5:00 pm - 9:00 pm</p>
+
+      <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="space-y-12">
+          <div>
+            <h2 className="text-4xl mb-8 font-bold border-l-4 border-[#f39200] pl-6">営業時間</h2>
+            <div className="grid grid-cols-2 gap-y-4 text-lg">
+              <p className="font-bold text-stone-200">月曜日</p><p className="text-stone-400">17:00 - 21:00</p>
+              <p className="font-bold text-stone-200">火曜日</p><p className="text-stone-400">17:00 - 21:00</p>
+              <p className="font-bold text-[#f39200]">水曜日</p><p className="text-[#f39200]">定休日</p>
+              <p className="font-bold text-stone-200">木曜日</p><p className="text-stone-400">17:00 - 21:00</p>
+              <p className="font-bold text-stone-200">金曜日</p><p className="text-stone-400">17:00 - 22:00</p>
+              <p className="font-bold text-stone-200">土曜日</p><p className="text-stone-400">17:00 - 21:30</p>
+              <p className="font-bold text-stone-200">日曜日</p><p className="text-stone-400">17:00 - 21:00</p>
             </div>
           </div>
+          <div>
+            <h2 className="text-4xl mb-6 font-bold border-l-4 border-[#f39200] pl-6">所在地</h2>
+            <p className="text-xl text-stone-400 mb-6">東京都港区三田 1-2-3</p>
+            <Link className="inline-block bg-[#f39200] hover:bg-[#d98300] text-stone-950 px-10 py-4 rounded-xl font-bold transition-all shadow-lg" href="https://www.google.com/maps/search/?api=1&query=東京都港区三田1-2-3">ルート案内を表示</Link>
+          </div>
+        </div>
+        <div className="h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-[#f39200]">
+          <Map />
         </div>
       </div>
     </article>
+
   )
 }
 

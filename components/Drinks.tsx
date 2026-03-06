@@ -1,346 +1,263 @@
-import MenuItem from "./MenuItem"
-import { Tag } from "./MenuItem"
+import MenuItem from "./MenuItem";
+import { Tag } from "./MenuItem";
 
 const Drinks = () => {
   return (
     <section className="min-h-screen p-5">
       {/* ---------- Speciale Cocktails ---------- */}
-      <h3 className="">Speciale Cocktails</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all hover:pl-8">厳選カクテル (Speciale Cocktails)</h3>
       <MenuItem
-        name="Grapefruitti Margarita"
-        description="cuervo gold tequila, gra gala, fresh squeezed ruby grapefruit, lime, rocks, salt"
-        price={11}
+        name="グレープフルッティ・マルガリータ"
+        description="クエルボ・ゴールドテキーラ、グラガラ、絞りたてルビーグレープフルーツ、ライム"
+        price={1100}
         tags={[]}
       />
       <MenuItem
-        name="Whiskey Sour"
-        description="makers mark, lemon, simple, rocks, amarena cherry"
-        price={11}
+        name="ウイスキーサワー"
+        description="メーカーズマーク、レモン、シロップ、アマレーナチェリー"
+        price={1100}
         tags={[]}
       />
       <MenuItem
-        name="A Taversaiamo"
-        description="monopolowa vodka, st. germain elderflower liqueur, lime, simple, served up"
-        price={11}
+        name="ア・タヴェルシアーモ"
+        description="モノポロワ・ウォッカ、サンジェルマン・エルダーフラワー、ライム、シロップ"
+        price={1100}
         tags={[]}
       />
       <MenuItem
-        name="Americano"
-        description="campari, sweet vermouth, soda, ver ice with an orange peel"
-        price={11}
+        name="アメリカーノ"
+        description="カンパリ、スイートベルモット、ソーダ、オレンジピール"
+        price={1100}
         tags={[]}
       />
       <MenuItem
-        name="Dark & Stormy"
-        description="goslings dark rum, lime, ginger, simple, soda, served over ice"
-        price={11}
+        name="ダーク＆ストーミー"
+        description="ゴズリングス・ダークラム、ライム、ジンジャー、ソーダ"
+        price={1100}
         tags={[]}
       />
       <MenuItem
-        name="Aviation"
-        description="tanquerey gin, creme de violette, lemon, lucardo maraschino brandy, up with a twist of lemon"
-        price={11}
+        name="アビエーション"
+        description="タンカレー・ジン、クレーム・ド・ヴィオレット、レモン、ルクサルド・マラスキーノ"
+        price={1100}
         tags={[]}
       />
       <MenuItem
-        name="Modern Fashioned"
-        description="buffalo trace bourbon, ramazotti amaro, over a large cuve with an orange peel"
-        price={11}
+        name="モダン・ファッションド"
+        description="バッファロートレース・バーボン、ラマゾッティ・アマーロ、オレンジピール"
+        price={1100}
         tags={[]}
       />
       <MenuItem
-        name="Sazerac"
-        description="bulleit rye, sambuca, peychauds bitters, stirred and served neat with an orange peel"
-        price={11}
+        name="サゼラック"
+        description="ブレット・ライ、サンブーカ、ペイショーズ・ビターズ、オレンジピール"
+        price={1100}
         tags={[]}
       />
 
       {/* ---------- Vino Bianco ---------- */}
-      <h3 className="">Vino Bianco</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">白ワイン (Vino Bianco)</h3>
       <MenuItem
-        name="Vandori"
-        description="pinot grigio, italy nv"
-        price={[8, 26]}
-        sizes={["glass", "bottle"]}
+        name="ヴァンドリ"
+        description="ピノ・グリージョ (イタリア)"
+        price={[800, 2600]}
+        sizes={["グラス", "ボトル"]}
         tags={[]}
       />
       <MenuItem
-        name="Farina"
-        description="chiaretto bardolino, italy '21"
-        price={[9, 33]}
-        sizes={["glass", "bottle"]}
+        name="ファリーナ"
+        description="キアレット・バルドリーノ (イタリア '21)"
+        price={[900, 3300]}
+        sizes={["グラス", "ボトル"]}
         tags={[]}
       />
       <MenuItem
-        name="Sun Garden"
-        description="riesling, germany '20"
-        price={[9, 33]}
-        sizes={["glass", "bottle"]}
+        name="サンガーデン"
+        description="リースリング (ドイツ '20)"
+        price={[900, 3300]}
+        sizes={["グラス", "ボトル"]}
         tags={[]}
       />
       <MenuItem
-        name="Franco Serra"
-        description="bianco (chardonnay/cortese), piemonte, italy '21"
-        price={[9, 33]}
-        sizes={["glass", "bottle"]}
+        name="フランコ・セッラ"
+        description="ビアンコ（シャルドネ/コルテーゼ）ピエモンテ (イタリア '21)"
+        price={[900, 3300]}
+        sizes={["グラス", "ボトル"]}
         tags={[]}
       />
       <MenuItem
-        name="Riff"
-        description="pinot grigio, venezie, italy '21"
-        price={[10, 37]}
-        sizes={["glass", "bottle"]}
+        name="リフ"
+        description="ピノ・グリージョ、ヴェネツィエ (イタリア '21)"
+        price={[1000, 3700]}
+        sizes={["グラス", "ボトル"]}
         tags={[]}
       />
       <MenuItem
-        name="Cooper Mountain"
-        description="organic pinot gris, willamette valley '21"
-        price={[11, 41]}
-        sizes={["glass", "bottle"]}
+        name="クーパー・マウンテン"
+        description="オーガニック・ピノ・グリ、ウィラメットバレー ('21)"
+        price={[1100, 4100]}
+        sizes={["グラス", "ボトル"]}
         tags={[]}
       />
       <MenuItem
-        name="La Bella"
-        description="prosecco, friulani, italy nv"
-        price={[0, 10]}
-        sizes={["glass", "bottle"]}
+        name="ラ・ベッラ"
+        description="プロセッコ、フリウリ (イタリア)"
+        price={[0, 1000]}
+        sizes={["グラス", "ボトル"]}
         tags={[]}
       />
       <MenuItem
-        name="Moncalvina"
-        description="moscato d'asti, italy '19"
-        price={[0, 35]}
-        sizes={["glass", "bottle"]}
+        name="モンカルヴィーナ"
+        description="モスカート・ダスティ (イタリア '19)"
+        price={[0, 3500]}
+        sizes={["グラス", "ボトル"]}
         tags={[]}
       />
 
       {/* ---------- Vino Rosso ---------- */}
-      <h3 className="">Vino Rosso</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">赤ワイン (Vino Rosso)</h3>
       <MenuItem
-        name="Vandori"
-        description="cabernet sauvignon, italy nv"
-        price={[8, 26]}
-        sizes={["glass", "bottle"]}
+        name="ヴァンドリ"
+        description="カベルネ・ソーヴィニヨン (イタリア)"
+        price={[800, 2600]}
+        sizes={["グラス", "ボトル"]}
         tags={[]}
       />
       <MenuItem
-        name="San Giorgio"
-        description="sangiovese di publia, italy '20"
-        price={[9, 33]}
-        sizes={["glass", "bottle"]}
+        name="サン・ジョルジョ"
+        description="サンジョヴェーゼ・ディ・プーリア (イタリア '20)"
+        price={[900, 3300]}
+        sizes={["グラス", "ボトル"]}
         tags={[]}
       />
       <MenuItem
-        name="Casa Benasal"
-        description="tinto garnacha, spain '20"
-        price={[9, 33]}
-        sizes={["glass", "bottle"]}
+        name="カーサ・ベナサル"
+        description="ティント・ガルナッチャ (スペイン '20)"
+        price={[900, 3300]}
+        sizes={["グラス", "ボトル"]}
         tags={[]}
       />
       <MenuItem
-        name="Travignoli"
-        description="chianti, italy '21"
-        price={[10, 37]}
-        sizes={["glass", "bottle"]}
+        name="トラヴィニョーリ"
+        description="キャンティ (イタリア '21)"
+        price={[1000, 3700]}
+        sizes={["グラス", "ボトル"]}
         tags={[]}
       />
       <MenuItem
-        name="Barone Cornacchia"
-        description="montepulciano d'abruzzo, italy '19"
-        price={[10, 37]}
-        sizes={["glass", "bottle"]}
+        name="バローネ・コルナッキア"
+        description="モンテプルチャーノ・ダブルッツォ (イタリア '19)"
+        price={[1000, 3700]}
+        sizes={["グラス", "ボトル"]}
         tags={[]}
       />
       <MenuItem
-        name="Throw Back"
-        description="cabernet sauvignon, columbia valley '19"
-        price={[11, 41]}
-        sizes={["glass", "bottle"]}
+        name="スローバック"
+        description="カベルネ・ソーヴィニヨン、コロンビアバレー ('19)"
+        price={[1100, 4100]}
+        sizes={["グラス", "ボトル"]}
         tags={[]}
       />
       <MenuItem
-        name="Loosen Christopher"
-        description="jj pinot noir, willamette valley '19"
-        price={[13, 46]}
-        sizes={["glass", "bottle"]}
+        name="ルーセン・クリストファー"
+        description="JJ ピノ・ノワール、ウィラメットバレー ('19)"
+        price={[1300, 4600]}
+        sizes={["グラス", "ボトル"]}
         tags={[]}
       />
       <MenuItem
-        name="Bodegas Ontañon"
-        description="tempranillo garnacha, rioja, spain '18"
-        price={[0, 39]}
-        sizes={["glass", "bottle"]}
-        tags={[]}
-      />
-      <MenuItem
-        name="Inama"
-        description="piu, camenere, italy '19"
-        price={[0, 44]}
-        sizes={["glass", "bottle"]}
-        tags={[]}
-      />
-      <MenuItem
-        name="La Valentina"
-        description="spelt, montepulciano d'abruzzo, italy '17"
-        price={[0, 44]}
-        sizes={["glass", "bottle"]}
-        tags={[]}
-      />
-      <MenuItem
-        name="Vietti"
-        description="dolcetto d'alba, italy '20"
-        price={[0, 44]}
-        sizes={["glass", "bottle"]}
+        name="ボデガス・オンタニョン"
+        description="テンプラニーリョ・ガルナッチャ、リオハ (スペイン '18)"
+        price={[0, 3900]}
+        sizes={["グラス", "ボトル"]}
         tags={[]}
       />
 
       {/* ---------- Beer on Tap ---------- */}
-      <h3 className="">Beer on Tap</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">生ビール (Beer on Tap)</h3>
       <MenuItem
-        name="Upright"
-        description="engelberg pilsener, portland"
-        price={[5, 7]}
-        sizes={["glass", "pint"]}
+        name="アップライト"
+        description="エンゲルベルグ・ピルスナー (ポートランド)"
+        price={[500, 700]}
+        sizes={["グラス", "パイント"]}
         tags={[]}
       />
       <MenuItem
-        name="Hammer and Stitch"
-        description="the weizen, portland"
-        price={[5, 7]}
-        sizes={["glass", "pint"]}
+        name="ハマー・アンド・スティッチ"
+        description="ザ・ヴァイツェン (ポートランド)"
+        price={[500, 700]}
+        sizes={["グラス", "パイント"]}
         tags={[]}
       />
       <MenuItem
-        name="Double Mountain"
-        description="ira, hood river"
-        price={[5, 7]}
-        sizes={["glass", "pint"]}
-        tags={[]}
-      />
-      <MenuItem
-        name="Barely Brown's"
-        description="pallet jack ipa, baker city"
-        price={[5, 7]}
-        sizes={["glass", "pint"]}
-        tags={[]}
-      />
-      <MenuItem
-        name="Everybody's Brewing"
-        description="hazy ipa, white salmon"
-        price={[5, 7]}
-        sizes={["glass", "pint"]}
+        name="ダブルマウンテン (IRA)"
+        description="フードリバー産アイリッシュ・レッドエール"
+        price={[500, 700]}
+        sizes={["グラス", "パイント"]}
         tags={[]}
       />
 
       {/* ---------- Bottled Beer & Cider ---------- */}
-      <h3 className="">Bottled Beer & Cider</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">瓶ビール＆シードル</h3>
       <MenuItem
-        name="Pabst Blue Ribbon,"
-        description="wisconsin"
-        price={6}
+        name="パブスト・ブルーリボン"
+        description="アメリカ産定番ラガー"
+        price={600}
         tags={[]}
       />
       <MenuItem
-        name="Peroni"
-        description="lager, italy"
-        price={7}
+        name="ペローニ"
+        description="イタリアを代表するラガービール"
+        price={700}
         tags={[]}
       />
       <MenuItem
-        name="Pfriem Ipa,"
-        description="hoodriver (500mL)"
-        price={8}
-        tags={[]}
-      />
-      <MenuItem
-        name="Weinhenstephaner"
-        description="n/a, germany"
-        price={6}
-        tags={[]}
-      />
-      <MenuItem
-        name="Double Mountain"
-        description="dry cider (500mL)"
-        price={8}
+        name="Pfriem IPA"
+        description="フードリバー産 IPA (500mL)"
+        price={800}
         tags={[]}
       />
 
       {/* ---------- Non-Alcoholic Beverages ---------- */}
-      <h3 className="">Non-Alcoholic Beverages</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">ノンアルコール飲料</h3>
       <MenuItem
-        name="San Pellegrino"
-        description="sparkling mineral water"
-        price={4}
+        name="サンペレグリノ"
+        description="スパークリング・ミネラルウォーター"
+        price={400}
         tags={[]}
       />
       <MenuItem
-        name="Fountain Soda"
-        description=""
-        price={3.5}
+        name="ファウンテン・ソーダ"
+        description="コーラ、サイダーなど各種"
+        price={350}
         tags={[]}
       />
       <MenuItem
-        name="San Pellegrino"
-        description="aranciata or limonata"
-        price={4}
+        name="自家製レモネード"
+        description="店内で手作りしているフレッシュなレモネード"
+        price={400}
         tags={[]}
       />
       <MenuItem
-        name="Lemonade"
-        description="made in house"
-        price={4}
+        name="コーヒー"
+        description="挽きたての豆を使用したホットコーヒー"
+        price={400}
         tags={[]}
       />
       <MenuItem
-        name="GT's Kombucha"
-        description="trilogy"
-        price={6}
+        name="アイスティー"
+        description="すっきりとした味わいのアイスティー"
+        price={400}
         tags={[]}
       />
       <MenuItem
-        name="Cock & Bull"
-        description="ginger beer"
-        price={5}
-        tags={[]}
-      />
-      <MenuItem
-        name="Hot Tea"
-        description=""
-        price={4}
-        tags={[]}
-      />
-      <MenuItem
-        name="Groundwork"
-        description="coffee"
-        price={4}
-        tags={[]}
-      />
-      <MenuItem
-        name="Groundwork"
-        description="iced tea"
-        price={4}
-        tags={[]}
-      />
-      <MenuItem
-        name="Martinelli's"
-        description="apple juice"
-        price={4}
-        tags={[]}
-      />
-      <MenuItem
-        name="Hot Chocolate"
-        description="with marshmallows"
-        price={5}
-        tags={[]}
-      />
-      <MenuItem
-        name="Milk"
-        description=""
-        price={3.5}
+        name="ホットチョコレート"
+        description="マシュマロを添えた濃厚なココア"
+        price={500}
         tags={[]}
       />
     </section>
-  )
-}
+  );
+};
 
 export default Drinks;
