@@ -242,7 +242,7 @@ const Home = () => {
         <div className="max-w-5xl mx-auto px-6 text-center">
           <span className="handwritten text-[#f39200] text-2xl mb-4 block">Testimonials</span>
           <h2 className="text-[clamp(2.5rem,10vw,5rem)] mb-24 italic tracking-tighter">お客様の声</h2>
-          <div className="flex flex-col gap-16">
+          <div className="flex flex-col gap-8 md:gap-16">
             <Review
               body="三田の路地裏にある、本当は教えたくない穴場のお店です。仕事終わりにふらっと寄って、自家製パスタとワインで一息つくのが毎週末の楽しみ。気取らないスタッフの方々との会話も心地よく、明日への元気がもらえます。"
               name="佐藤 健一"
