@@ -38,7 +38,7 @@ const Home = () => {
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 1.1 }}
-              animate={{ opacity: 0.5, scale: 1 }}
+              animate={{ opacity: 0.7, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 2, ease: "easeInOut" }}
               className="absolute inset-0"
@@ -52,9 +52,9 @@ const Home = () => {
               />
             </motion.div>
           </AnimatePresence>
-          {/* オーバーレイ：画像を暗くして上に乗る文字を読みやすくする */}
-          <div className="absolute inset-0 bg-stone-950/60 z-[1]" />
-          <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-stone-950 to-transparent z-[2]" />
+          {/* オーバーレイ：画像を以前より明るく調整して視認性を向上 */}
+          <div className="absolute inset-0 bg-black/40 z-[1]" />
+          <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-stone-950/80 to-transparent z-[2]" />
         </div>
 
         {/* センターコンテンツ：ロゴやメインキャッチコピー */}
@@ -62,7 +62,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="w-full max-w-2xl bg-stone-900/70 backdrop-blur-3xl px-10 py-20 flex flex-col justify-center items-center shadow-[0_0_100px_rgba(0,0,0,0.5)] rounded-[3rem] z-10 text-center border border-white/10"
+          className="w-full max-w-2xl bg-stone-900/40 backdrop-blur-3xl px-10 py-20 flex flex-col justify-center items-center shadow-[0_0_100px_rgba(0,0,0,0.5)] rounded-[3rem] z-10 text-center border border-white/10"
         >
           <span className="handwritten text-[#f39200] text-3xl mb-4 italic">Benvenuti</span>
           {/* ロゴ：丸み(rounded)とブレンディング(mix-blend)で洗練された印象に */}
