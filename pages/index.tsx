@@ -31,7 +31,7 @@ const Home = () => {
   return (
     <article className="overflow-x-hidden selection:bg-[#f39200]/30 text-stone-100">
       {/* ヒーローセクション：Webサイトの最上部、最初に目が触れるエリア */}
-      <section className="min-h-screen relative flex justify-center items-center px-4 overflow-hidden">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20 md:py-0">
         {/* 背景カルーセル：画像がふわっと切り替わる仕組み */}
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait">
@@ -62,7 +62,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="w-[90%] max-w-2xl bg-stone-900/20 backdrop-blur-3xl px-10 py-12 md:py-20 flex flex-col justify-center items-center shadow-[0_0_100px_rgba(0,0,0,0.5)] rounded-[3rem] z-10 text-center border border-white/10"
+          className="w-[90%] max-w-2xl bg-stone-900/20 backdrop-blur-3xl px-10 py-12 md:py-20 flex flex-col justify-center items-center shadow-[0_0_100px_rgba(0,0,0,0.5)] rounded-[3rem] z-10 text-center border border-white/10 my-8 md:my-0"
         >
           <span className="handwritten text-[#f39200] text-3xl mb-4 italic">Benvenuti</span>
           {/* ロゴ：丸み(rounded)とブレンディング(mix-blend)で洗練された印象に */}
@@ -163,13 +163,13 @@ const Home = () => {
 
 
       <section id="experience" className="bg-stone-900 py-16 md:py-32 relative z-10 px-6">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[4fr_6fr] gap-24 items-center">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[4fr_6fr] gap-12 lg:gap-24 items-center">
           <div className="space-y-8">
             <span className="handwritten text-[#f39200] text-2xl block">Find Us</span>
             <h2 className="text-[clamp(2.5rem,10vw,5rem)] !leading-[1.2] tracking-tighter uppercase mb-12">
               三田で愛される<br /><span className="text-[#f39200]">街のイタリアン</span>
             </h2>
-            <div className="space-y-4 text-lg font-light text-stone-400 leading-relaxed italic border-l-2 border-[#f39200]/30 pl-6 mb-12">
+            <div className="space-y-4 text-lg font-light text-stone-400 leading-relaxed italic border-l-2 border-[#f39200]/30 pl-6 mb-8 lg:mb-12">
               <p>三田の喧騒を少し離れた、静かな路地裏。</p>
               <p>オレンジ色の灯りが漏れるそのドアが、私たちの目印です。</p>
               <p>わざわざ足を運んでくださるあなたを、</p>
@@ -186,8 +186,12 @@ const Home = () => {
                 alt="Dining Experience at La Buca"
                 className="transition-transform duration-1000 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-12">
-                <p className="text-white text-2xl font-serif italic">Sharing moments, creating memories.</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-8 md:p-12">
+                <p className="text-white text-lg md:text-2xl font-serif font-medium leading-relaxed tracking-wider drop-shadow-lg">
+                  湯気の向こうに、弾む声。<br />
+                  今宵も三田の路地裏で、<br />
+                  小さな幸せが重なります。
+                </p>
               </div>
             </div>
           </div>
@@ -274,22 +278,24 @@ const Home = () => {
             <div>
               <span className="handwritten text-[#f39200] text-2xl mb-4 block">Hours & Location</span>
               <h2 className="text-[clamp(2.5rem,10vw,5rem)] font-bold mb-12 tracking-tighter">営業時間・アクセス</h2>
-              <div className="space-y-6 text-xl">
-                <div className="flex justify-between items-center border-b border-stone-800 pb-4">
+              <div className="space-y-4 text-base md:text-xl">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-stone-800 pb-3 gap-2">
                   <span className="font-bold text-stone-200">月曜 - 火曜</span>
-                  <div className="flex flex-col items-end text-stone-400">
+                  <div className="flex items-center text-stone-400 gap-3">
                     <span>12:00-15:00</span>
+                    <span className="text-stone-600">/</span>
                     <span>18:00-22:00</span>
                   </div>
                 </div>
-                <div className="flex justify-between items-center border-b border-stone-800 pb-4">
+                <div className="flex justify-between items-center border-b border-stone-800 pb-3">
                   <span className="font-bold text-[#f39200]">水曜</span>
                   <span className="text-[#f39200]">定休日</span>
                 </div>
-                <div className="flex justify-between items-center border-b border-stone-800 pb-4">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-stone-800 pb-3 gap-2">
                   <span className="font-bold text-stone-200">木曜 - 日曜</span>
-                  <div className="flex flex-col items-end text-stone-400">
+                  <div className="flex items-center text-stone-400 gap-3">
                     <span>12:00-15:00</span>
+                    <span className="text-stone-600">/</span>
                     <span>18:00-22:00</span>
                   </div>
                 </div>
