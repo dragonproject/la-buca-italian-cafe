@@ -238,18 +238,21 @@ const Home = () => {
               name="佐藤 健一"
               title="近隣にお勤めの会社員"
               left={false}
+              avatar="/images/avatar1.png"
             />
             <Review
               body="子供を連れてのランチでいつもお世話になっています。お子様メニューも充実していて、家族みんなで本格的な味が楽しめるのが嬉しいです。この街に、こんなにアットホームなイタリアンがあって良かったです。"
               name="田中 恵美"
               title="主婦"
               left={true}
+              avatar="/images/avatar2.png"
             />
             <Review
               body="散歩のついでに立ち寄ることが多いのですが、いつ行っても温かく迎えてくれます。丁寧な手仕事が伝わる料理はどれも優しくて、店主の温かい人柄がそのまま味に出ているようです。ずっと通い続けたいお店です。"
               name="鈴木 裕樹"
               title="ご近所の常連さん"
               left={false}
+              avatar="/images/avatar3.png"
             />
           </div>
         </div>
