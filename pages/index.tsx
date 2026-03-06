@@ -66,10 +66,10 @@ const Home = () => {
         >
           <span className="handwritten text-[#f39200] text-3xl mb-4 italic">Benvenuti</span>
           {/* ロゴ：丸み(rounded)とブレンディング(mix-blend)で洗練された印象に */}
-          <div className="relative mb-10 drop-shadow-2xl shadow-2xl overflow-hidden rounded-full w-64 h-64 sm:w-[400px] sm:h-[400px] flex items-center justify-center bg-white">
+          <div className="relative mb-10 drop-shadow-2xl shadow-2xl overflow-hidden rounded-full w-72 h-72 sm:w-[500px] sm:h-[500px] flex items-center justify-center bg-white">
             <motion.div
-              animate={{ scale: [1, 1.02, 1] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              animate={{ scale: [1, 1.03, 1] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               className="w-full h-full relative"
             >
               <Image src="/images/logo_dynamic.png" alt="La Buca Logo" layout="fill" objectFit="contain" className="scale-110" />
