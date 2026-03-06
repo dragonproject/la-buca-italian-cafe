@@ -66,8 +66,14 @@ const Home = () => {
         >
           <span className="handwritten text-[#f39200] text-3xl mb-4 italic">Benvenuti</span>
           {/* ロゴ：丸み(rounded)とブレンディング(mix-blend)で洗練された印象に */}
-          <div className="relative mb-10 mix-blend-lighten drop-shadow-2xl shadow-2xl overflow-hidden rounded-[10px] bg-black">
-            <Image src="/logo.jpg" alt="La Buca Logo" width={256} height={141} />
+          <div className="relative mb-10 drop-shadow-2xl shadow-2xl overflow-hidden rounded-full w-64 h-64 sm:w-[400px] sm:h-[400px] flex items-center justify-center bg-white">
+            <motion.div
+              animate={{ scale: [1, 1.02, 1] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="w-full h-full relative"
+            >
+              <Image src="/images/logo_dynamic.png" alt="La Buca Logo" layout="fill" objectFit="contain" className="scale-110" />
+            </motion.div>
           </div>
           <h1 className="mb-6 text-5xl md:text-8xl lowercase italic text-[#f39200] font-serif">la buca</h1>
           <p className="text-xl md:text-2xl font-light tracking-[0.4em] uppercase text-stone-100 mb-2">
@@ -156,7 +162,7 @@ const Home = () => {
       </section>
 
 
-      <section id="access" className="bg-stone-900 py-32 relative z-10 px-6">
+      <section id="experience" className="bg-stone-900 py-32 relative z-10 px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[4fr_6fr] gap-24 items-center">
           <div className="space-y-8">
             <span className="handwritten text-[#f39200] text-2xl block">Find Us</span>
@@ -169,37 +175,21 @@ const Home = () => {
               <p>わざわざ足を運んでくださるあなたを、</p>
               <p>焼きたてのパンの香りと、変わらない笑顔でお迎えします。</p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6 text-lg border-t border-stone-800 pt-12">
-              <div className="space-y-4 text-lg">
-                <div className="flex justify-between items-center border-b border-stone-800/50 pb-2 gap-4">
-                  <span className="font-semibold text-stone-200">月曜 - 火曜</span>
-                  <div className="flex flex-col items-end text-stone-400 whitespace-nowrap">
-                    <span>12:00-15:00</span>
-                    <span>18:00-22:00</span>
-                  </div>
-                </div>
-                <div className="flex justify-between items-center border-b border-stone-800/50 pb-2 gap-4">
-                  <span className="font-semibold text-[#f39200]">水曜</span>
-                  <span className="text-[#f39200]">定休日</span>
-                </div>
-                <div className="flex justify-between items-center border-b border-stone-800/50 pb-2 gap-4">
-                  <span className="font-semibold text-stone-200">木曜 - 日曜</span>
-                  <div className="flex flex-col items-end text-stone-400 whitespace-nowrap">
-                    <span>12:00-15:00</span>
-                    <span>18:00-22:00</span>
-                  </div>
-                </div>
+          </div>
+          <div className="relative group">
+            <div className="absolute -inset-4 bg-[#f39200]/10 rounded-[3rem] blur-2xl group-hover:bg-[#f39200]/20 transition-all duration-700" />
+            <div className="relative h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5">
+              <Image
+                src="/images/experience_dining.png"
+                layout="fill"
+                objectFit="cover"
+                alt="Dining Experience at La Buca"
+                className="transition-transform duration-1000 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-12">
+                <p className="text-white text-2xl font-serif italic">Sharing moments, creating memories.</p>
               </div>
             </div>
-            <div className="pt-8 text-center lg:text-left">
-              <Link href="https://www.google.com/maps/search/?api=1&query=東京都港区三田1-2-3" className="text-xl text-[#f39200] hover:text-[#d98300] transition-colors inline-flex items-center gap-2">
-                東京都港区三田 1-2-3
-                <span className="text-sm">→ アクセス</span>
-              </Link>
-            </div>
-          </div>
-          <div className="h-[500px] rounded-[2rem] overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-stone-800 group bg-[#f39200] relative">
-            <Map />
           </div>
         </div>
       </section>
@@ -274,6 +264,49 @@ const Home = () => {
               left={false}
               avatar="/images/avatar3.png"
             />
+          </div>
+        </div>
+      </section>
+
+      <section id="access" className="bg-stone-900 py-32 relative z-10 px-6 border-t border-white/5">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1fr] gap-20 items-center">
+          <div className="space-y-12">
+            <div>
+              <span className="handwritten text-[#f39200] text-2xl mb-4 block">Hours & Location</span>
+              <h2 className="text-[clamp(2.5rem,10vw,5rem)] font-bold mb-12 tracking-tighter">営業時間・アクセス</h2>
+              <div className="space-y-6 text-xl">
+                <div className="flex justify-between items-center border-b border-stone-800 pb-4">
+                  <span className="font-bold text-stone-200">月曜 - 火曜</span>
+                  <div className="flex flex-col items-end text-stone-400">
+                    <span>12:00-15:00</span>
+                    <span>18:00-22:00</span>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center border-b border-stone-800 pb-4">
+                  <span className="font-bold text-[#f39200]">水曜</span>
+                  <span className="text-[#f39200]">定休日</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-stone-800 pb-4">
+                  <span className="font-bold text-stone-200">木曜 - 日曜</span>
+                  <div className="flex flex-col items-end text-stone-400">
+                    <span>12:00-15:00</span>
+                    <span>18:00-22:00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-stone-800/30 p-8 rounded-3xl border border-white/5">
+              <p className="text-stone-300 text-xl mb-6">東京都港区三田 1-2-3</p>
+              <Link href="https://www.google.com/maps/search/?api=1&query=東京都港区三田1-2-3"
+                className="bg-[#f39200] text-stone-950 px-10 py-4 rounded-xl font-bold hover:bg-[#d98300] transition-all inline-block shadow-lg">
+                Googleマップで開く
+              </Link>
+            </div>
+          </div>
+
+          <div className="h-[600px] rounded-[3rem] overflow-hidden shadow-2xl border border-stone-800 group relative">
+            <Map />
           </div>
         </div>
       </section>
