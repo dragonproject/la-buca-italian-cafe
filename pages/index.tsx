@@ -66,7 +66,7 @@ const Home = () => {
         >
           <span className="handwritten text-[#f39200] text-3xl mb-4 italic">Benvenuti</span>
           {/* ロゴ：丸み(rounded)とブレンディング(mix-blend)で洗練された印象に */}
-          <div className="relative mb-10 drop-shadow-2xl shadow-2xl overflow-hidden rounded-full w-72 h-72 sm:w-[500px] sm:h-[500px] flex items-center justify-center bg-white">
+          <div className="relative mb-10 drop-shadow-2xl shadow-2xl overflow-hidden rounded-full w-56 h-56 sm:w-[500px] sm:h-[500px] flex items-center justify-center bg-white">
             <motion.div
               animate={{ scale: [1, 1.03, 1] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
@@ -112,7 +112,7 @@ const Home = () => {
       </section>
 
       {/* Philosophy Section: お店の想いや歴史を伝えるセクション */}
-      <section id="story" className="warm-bg py-32 px-6">
+      <section id="story" className="warm-bg py-16 md:py-32 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -162,7 +162,7 @@ const Home = () => {
       </section>
 
 
-      <section id="experience" className="bg-stone-900 py-32 relative z-10 px-6">
+      <section id="experience" className="bg-stone-900 py-16 md:py-32 relative z-10 px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[4fr_6fr] gap-24 items-center">
           <div className="space-y-8">
             <span className="handwritten text-[#f39200] text-2xl block">Find Us</span>
@@ -194,7 +194,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="dishes" className="bg-stone-950 py-32 relative z-10 px-6 overflow-hidden">
+      <section id="dishes" className="bg-stone-950 py-16 md:py-32 relative z-10 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-2xl">
@@ -236,7 +236,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="reviews" className="bg-gradient-to-b from-stone-950 via-stone-900 to-black relative py-32 z-10 overflow-hidden">
+      <section id="reviews" className="bg-gradient-to-b from-stone-950 via-stone-900 to-black relative py-16 md:py-32 z-10 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[#f39200]/5 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-6 text-center">
@@ -268,7 +268,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="access" className="bg-stone-900 py-32 relative z-10 px-6 border-t border-white/5">
+      <section id="access" className="bg-stone-900 py-16 md:py-32 relative z-10 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1fr] gap-20 items-center">
           <div className="space-y-12">
             <div>
