@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import Food from "@/components/Food";
 import Desserts from "@/components/Desserts";
 import Drinks from "@/components/Drinks";
@@ -56,7 +57,7 @@ const Menu = () => {
             transition={{ duration: 1 }}
             className="absolute inset-0"
           >
-            <img src={bannerImage} className="w-full h-full object-cover" alt="Menu Banner" />
+            <Image src={bannerImage} layout="fill" objectFit="cover" alt="Menu Banner" />
           </motion.div>
         </AnimatePresence>
         <div className="absolute inset-0 bg-stone-950/40 z-10" />

@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -41,7 +42,9 @@ export default function App({ Component, pageProps }: AppProps) {
       <div className="grain-overlay" />
       <header className='fixed top-0 left-0 right-0 bg-stone-900/80 backdrop-blur-xl flex justify-between items-center px-6 md:px-12 py-4 z-50 border-b border-white/5'>
         <Link href="/" className='flex items-center gap-3 group'>
-          <img src="/logo.jpg" alt="Logo" className="w-12 h-12 rounded-full mix-blend-lighten group-hover:scale-110 transition-transform" />
+          <div className="relative w-12 h-12 rounded-full overflow-hidden mix-blend-lighten group-hover:scale-110 transition-transform">
+            <Image src="/logo.jpg" alt="Logo" layout="fill" objectFit="contain" />
+          </div>
           <span className='text-3xl font-serif lowercase italic text-[#f39200] group-hover:text-white transition-colors tracking-tight'>la buca</span>
         </Link>
 

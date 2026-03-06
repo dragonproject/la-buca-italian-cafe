@@ -1,6 +1,7 @@
 import Map from "@/components/Map";
 import Review from "@/components/Review";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -35,9 +36,11 @@ const Home = () => {
               transition={{ duration: 2, ease: "easeInOut" }}
               className="absolute inset-0"
             >
-              <img
+              <Image
                 src={images[index]}
-                className="w-full h-full object-cover"
+                layout="fill"
+                objectFit="cover"
+                priority
                 alt="Background"
               />
             </motion.div>
@@ -54,7 +57,9 @@ const Home = () => {
           className="w-full max-w-2xl bg-stone-900/70 backdrop-blur-3xl px-10 py-20 flex flex-col justify-center items-center shadow-[0_0_100px_rgba(0,0,0,0.5)] rounded-[3rem] z-10 text-center border border-white/10"
         >
           <span className="handwritten text-[#f39200] text-3xl mb-4 italic">Benvenuti</span>
-          <img src="/logo.jpg" alt="La Buca Logo" className="w-64 mb-10 mix-blend-lighten drop-shadow-2xl rounded-xl shadow-2xl" />
+          <div className="relative w-64 h-32 mb-10 mix-blend-lighten drop-shadow-2xl shadow-2xl overflow-hidden rounded-xl">
+            <Image src="/logo.jpg" alt="La Buca Logo" layout="fill" objectFit="contain" />
+          </div>
           <h1 className="mb-6 text-5xl md:text-8xl lowercase italic text-[#f39200] font-serif">la buca</h1>
           <p className="text-xl md:text-2xl font-light tracking-[0.4em] uppercase text-stone-100 mb-2">
             三田の街角、手作りの温もり。
@@ -100,11 +105,14 @@ const Home = () => {
             className="relative"
           >
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#f39200]/10 rounded-full blur-3xl" />
-            <img
-              src="/images/aboutpageimage02.jpg"
-              className="rounded-[2.5rem] shadow-2xl relative z-10 grayscale-[0.2] sepia-[0.1]"
-              alt="Handmade Pasta"
-            />
+            <div className="relative w-full aspect-[4/3] rounded-[2.5rem] shadow-2xl overflow-hidden relative z-10 grayscale-[0.2] sepia-[0.1]">
+              <Image
+                src="/images/aboutpageimage02.jpg"
+                layout="fill"
+                objectFit="cover"
+                alt="Handmade Pasta"
+              />
+            </div>
             <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl z-20 md:block hidden">
               <span className="handwritten text-[#f39200] text-4xl">Since 2002</span>
             </div>
@@ -191,7 +199,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div whileHover={{ y: -10 }} className="group relative h-[600px] rounded-3xl overflow-hidden border border-stone-800">
-              <img src="/dish1.jpg" alt="Signature Dish" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <Image src="/dish1.jpg" alt="Signature Dish" layout="fill" objectFit="cover" className="transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
               <div className="absolute bottom-8 left-8 right-8">
                 <p className="text-[#f39200] text-sm uppercase tracking-widest mb-2 font-bold">自慢のパスタ</p>
@@ -200,7 +208,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div whileHover={{ y: -10 }} className="group relative h-[600px] rounded-3xl overflow-hidden border border-stone-800 md:mt-12">
-              <img src="/dish2.jpg" alt="Signature Dish" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <Image src="/dish2.jpg" alt="Signature Dish" layout="fill" objectFit="cover" className="transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
               <div className="absolute bottom-8 left-8 right-8">
                 <p className="text-[#f39200] text-sm uppercase tracking-widest mb-2 font-bold">メイン料理</p>
@@ -209,7 +217,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div whileHover={{ y: -10 }} className="group relative h-[600px] rounded-3xl overflow-hidden border border-stone-800">
-              <img src="/interior.jpg" alt="Restaurant Interior" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <Image src="/interior.jpg" alt="Restaurant Interior" layout="fill" objectFit="cover" className="transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
               <div className="absolute bottom-8 left-8 right-8">
                 <p className="text-[#f39200] text-sm uppercase tracking-widest mb-2 font-bold">空間・おもてなし</p>

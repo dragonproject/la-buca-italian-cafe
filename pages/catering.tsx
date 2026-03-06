@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import MenuItem from "@/components/MenuItem";
 import Link from "next/link";
+import Image from "next/image";
 
 const Catering = () => {
   return (
@@ -18,7 +19,7 @@ const Catering = () => {
           transition={{ duration: 1.5 }}
           className="absolute inset-0"
         >
-          <img src="/images/menupageimage06.jpg" className="w-full h-full object-cover" alt="Catering Banner" />
+          <Image src="/images/menupageimage06.jpg" layout="fill" objectFit="cover" alt="Catering Banner" />
         </motion.div>
         <div className="absolute inset-0 bg-stone-950/40 z-10" />
         <div className="relative z-20 text-center space-y-4">
