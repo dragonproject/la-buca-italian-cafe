@@ -75,7 +75,7 @@ const Menu = () => {
 
       {/* Navigation Tabs */}
       <nav className="sticky top-20 bg-stone-900/95 backdrop-blur-xl z-40 border-b border-white/5 shadow-2xl">
-        <div className="max-w-4xl mx-auto flex items-center justify-center gap-4 md:gap-12 p-6 overflow-x-auto no-scrollbar">
+        <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-2 md:gap-12 p-4 md:p-6">
           {[
             { id: Page.food, label: "お料理" },
             { id: Page.drinks, label: "お飲み物" },
@@ -84,7 +84,7 @@ const Menu = () => {
           ].map((tab) => (
             <button
               key={tab.id}
-              className={`whitespace-nowrap transition-all duration-300 px-4 py-2 text-sm md:text-lg tracking-widest uppercase font-bold relative group ${page === tab.id ? "text-[#f39200]" : "text-stone-500 hover:text-stone-200"
+              className={`transition-all duration-300 px-4 py-2 text-sm md:text-lg tracking-widest uppercase font-bold relative group ${page === tab.id ? "text-[#f39200]" : "text-stone-500 hover:text-stone-200"
                 }`}
               onClick={() => setPage(tab.id)}
             >
