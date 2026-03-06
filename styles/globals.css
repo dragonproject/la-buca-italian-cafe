@@ -43,6 +43,27 @@
   .nav-link:hover::after {
     @apply w-full;
   }
+
+  /* --- Spacing System --- */
+  /* 基本のセクション余白（モバイルではタイトに、デスクトップは広々と） */
+  .section-padding {
+    @apply py-10 md:py-32 px-6 relative z-10;
+  }
+
+  /* 緊張感を持たせたタイトなセクション余白 */
+  .section-padding-tight {
+    @apply py-4 md:py-32 px-6 relative z-10;
+  }
+
+  /* セクション内のグリッドや要素間の基本間隔 */
+  .section-gap {
+    @apply gap-10 md:gap-24;
+  }
+
+  /* カード同士など、より密度の高い要素間の間隔 */
+  .section-gap-tight {
+    @apply gap-4 md:gap-16;
+  }
 }
 
 

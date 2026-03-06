@@ -112,8 +112,8 @@ const Home = () => {
       </section>
 
       {/* Philosophy Section: お店の想いや歴史を伝えるセクション */}
-      <section id="story" className="warm-bg py-16 md:py-32 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+      <section id="story" className="warm-bg section-padding">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 section-gap items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -162,8 +162,8 @@ const Home = () => {
       </section>
 
 
-      <section id="experience" className="bg-stone-900 py-16 md:py-32 relative z-10 px-6">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[4fr_6fr] gap-12 lg:gap-24 items-center">
+      <section id="experience" className="bg-stone-900 section-padding">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[4fr_6fr] section-gap items-center">
           <div className="space-y-8">
             <span className="handwritten text-[#f39200] text-2xl block">Find Us</span>
             <h2 className="text-[clamp(2.5rem,10vw,5rem)] !leading-[1.2] tracking-tighter uppercase mb-12">
@@ -198,7 +198,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="dishes" className="bg-stone-950 py-16 md:py-32 relative z-10 px-6 overflow-hidden">
+      <section id="dishes" className="bg-stone-950 section-padding overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-2xl">
@@ -240,13 +240,13 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="reviews" className="bg-[#1c1917] relative py-4 md:py-32 z-10 overflow-hidden border-t border-white/5">
+      <section id="reviews" className="bg-[#1c1917] section-padding-tight overflow-hidden border-t border-white/5">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] bg-[#f39200]/5 rounded-full blur-[150px] pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-6 text-center">
           <span className="handwritten text-[#f39200] text-2xl mb-4 block">Testimonials</span>
           <h2 className="text-[clamp(2.5rem,10vw,5rem)] mb-4 md:mb-24 italic tracking-tighter">お客様の声</h2>
-          <div className="flex flex-col gap-4 md:gap-16">
+          <div className="flex flex-col section-gap-tight">
             <Review
               body="三田の路地裏にある、本当は教えたくない穴場のお店です。仕事終わりにふらっと寄って、自家製パスタとワインで一息つくのが毎週末の楽しみ。気取らないスタッフの方々との会話も心地よく、明日への元気がもらえます。"
               name="佐藤 健一"
@@ -272,8 +272,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="access" className="bg-stone-950 py-16 md:py-32 relative z-10 px-6 border-t border-white/5 shadow-[0_-50px_100px_rgba(0,0,0,0.5)]">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1fr] gap-20 items-center">
+      <section id="access" className="bg-stone-950 section-padding border-t border-white/5 shadow-[0_-50px_100px_rgba(0,0,0,0.5)]">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1fr] section-gap items-center">
           <div className="space-y-12">
             <div>
               <span className="handwritten text-[#f39200] text-2xl mb-4 block">Hours & Location</span>
