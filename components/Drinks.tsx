@@ -5,7 +5,7 @@ const Drinks = () => {
   return (
     <section className="min-h-screen p-5">
       {/* ---------- Speciale Cocktails ---------- */}
-      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all hover:pl-8">厳選カクテル (Speciale Cocktails)</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all hover:pl-8">厳選カクテル / Speciale Cocktails</h3>
       <MenuItem
         name="グレープフルッティ・マルガリータ"
         description="クエルボ・ゴールドテキーラ、グラガラ、絞りたてルビーグレープフルーツ、ライム"
@@ -56,7 +56,7 @@ const Drinks = () => {
       />
 
       {/* ---------- Vino Bianco ---------- */}
-      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">白ワイン (Vino Bianco)</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">白ワイン / Vino Bianco</h3>
       <MenuItem
         name="ヴァンドリ"
         description="ピノ・グリージョ (イタリア)"
@@ -115,7 +115,7 @@ const Drinks = () => {
       />
 
       {/* ---------- Vino Rosso ---------- */}
-      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">赤ワイン (Vino Rosso)</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">赤ワイン / Vino Rosso</h3>
       <MenuItem
         name="ヴァンドリ"
         description="カベルネ・ソーヴィニヨン (イタリア)"
@@ -174,7 +174,7 @@ const Drinks = () => {
       />
 
       {/* ---------- Beer on Tap ---------- */}
-      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">生ビール (Beer on Tap)</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">生ビール / Beer on Tap</h3>
       <MenuItem
         name="アップライト"
         description="エンゲルベルグ・ピルスナー (ポートランド)"
@@ -198,7 +198,7 @@ const Drinks = () => {
       />
 
       {/* ---------- Bottled Beer & Cider ---------- */}
-      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">瓶ビール＆シードル</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">瓶ビール＆シードル / Bottled Beer & Cider</h3>
       <MenuItem
         name="パブスト・ブルーリボン"
         description="アメリカ産定番ラガー"
@@ -219,7 +219,7 @@ const Drinks = () => {
       />
 
       {/* ---------- Non-Alcoholic Beverages ---------- */}
-      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">ノンアルコール飲料</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">ノンアルコール飲料 / Non-Alcoholic Beverages</h3>
       <MenuItem
         name="サンペレグリノ"
         description="スパークリング・ミネラルウォーター"

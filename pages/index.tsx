@@ -57,8 +57,8 @@ const Home = () => {
           className="w-full max-w-2xl bg-stone-900/70 backdrop-blur-3xl px-10 py-20 flex flex-col justify-center items-center shadow-[0_0_100px_rgba(0,0,0,0.5)] rounded-[3rem] z-10 text-center border border-white/10"
         >
           <span className="handwritten text-[#f39200] text-3xl mb-4 italic">Benvenuti</span>
-          <div className="relative w-64 h-32 mb-10 mix-blend-lighten drop-shadow-2xl shadow-2xl overflow-hidden rounded-xl">
-            <Image src="/logo.jpg" alt="La Buca Logo" layout="fill" objectFit="contain" />
+          <div className="relative mb-10 mix-blend-lighten drop-shadow-2xl shadow-2xl overflow-hidden rounded-[10px] bg-black">
+            <Image src="/logo.jpg" alt="La Buca Logo" width={256} height={141} />
           </div>
           <h1 className="mb-6 text-5xl md:text-8xl lowercase italic text-[#f39200] font-serif">la buca</h1>
           <p className="text-xl md:text-2xl font-light tracking-[0.4em] uppercase text-stone-100 mb-2">
@@ -178,10 +178,8 @@ const Home = () => {
               </Link>
             </div>
           </div>
-          <div className="h-auto min-h-[500px] rounded-[2rem] overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-stone-800 group bg-[#f39200]">
-            <div className="w-full h-full transition-all duration-700">
-              <Map />
-            </div>
+          <div className="h-[500px] rounded-[2rem] overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-stone-800 group bg-[#f39200] relative">
+            <Map />
           </div>
         </div>
       </section>

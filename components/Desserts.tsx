@@ -4,7 +4,7 @@ import { Tag } from "./MenuItem";
 const Desserts = () => {
   return (
     <section className="p-5 min-h-[50vh]">
-      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all hover:pl-8">自家製デザート</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all hover:pl-8">自家製デザート / Desserts</h3>
       <MenuItem
         name="ティラミス"
         description="エスプレッソが香る、本場仕込みの贅沢な味わい"

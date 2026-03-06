@@ -5,7 +5,7 @@ const Food = () => {
   return (
     <section className="min-h-screen p-5">
       {/* ---------- 前菜 (Primi) ---------- */}
-      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all hover:pl-8">前菜 (Primi)</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all hover:pl-8">前菜 / Primi</h3>
       <MenuItem
         name="季節の自家製ピクルス"
         description="旬のお野菜を自家製ピクルス液で漬け込みました"
@@ -62,7 +62,7 @@ const Food = () => {
       />
 
       {/* ---------- サラダ・スープ・サイドメニュー ---------- */}
-      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">サラダ・スープ・付け合わせ</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">サラダ & サイド / Insalate & Sides</h3>
       <MenuItem
         name="本日のスープ"
         description=""
@@ -112,7 +112,7 @@ const Food = () => {
       />
 
       {/* ---------- パスタ (Pasta) ---------- */}
-      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">パスタ (Pasta)</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">パスタ / Pasta</h3>
       <MenuItem
         name="アルフレード"
         description="リングイネ：ローストガーリックとパルメザンチーズのクリームソース"
@@ -181,7 +181,7 @@ const Food = () => {
       />
 
       {/* ---------- メイン料理 (Entrata) ---------- */}
-      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">メイン料理 (Entrata)</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-8 text-3xl font-bold uppercase transition-all mt-20 hover:pl-8">メイン料理 / Entrata</h3>
       <MenuItem
         name="チキンのマルサラ"
         description="鶏肉のメダリオンソテー、マルサラワインとキノコのソース。マッシュポテト添え"
@@ -208,7 +208,7 @@ const Food = () => {
       />
 
       {/* ---------- 追加トッピング (Additions) ---------- */}
-      <h3 className="border-l-4 border-[#f39200] pl-6 mb-4 text-3xl font-bold mt-20">追加トッピング</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-4 text-3xl font-bold mt-20">追加トッピング / Additions</h3>
       <p className="italic text-stone-400 mb-8 pl-6 text-sm">※ 全てのメニューに追加いただけます</p>
       <div className="md:grid md:grid-cols-2 md:gap-x-24">
         <MenuItem

@@ -4,7 +4,7 @@ import { Tag } from "./MenuItem";
 const Kids = () => {
   return (
     <section className="p-5 min-h-[50vh]">
-      <h3 className="border-l-4 border-[#f39200] pl-6 mb-4 text-3xl font-bold uppercase transition-all hover:pl-8">お子様メニュー</h3>
+      <h3 className="border-l-4 border-[#f39200] pl-6 mb-4 text-3xl font-bold uppercase transition-all hover:pl-8">お子様メニュー / Kids</h3>
       <p className="italic text-stone-400 mb-8 pl-6 text-sm">※ メイン料理にはりんごのスライスとパンが付きます</p>
       <MenuItem
         name="お子様カイノミステーキ"
