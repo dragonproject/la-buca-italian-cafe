@@ -16,14 +16,23 @@ const Contact = () => {
         <div className="space-y-12">
           <div>
             <h2 className="text-4xl mb-8 font-bold border-l-4 border-[#f39200] pl-6">営業時間</h2>
-            <div className="grid grid-cols-2 gap-y-4 text-lg">
-              <p className="font-bold text-stone-200">月曜日</p><p className="text-stone-400">17:00 - 21:00</p>
-              <p className="font-bold text-stone-200">火曜日</p><p className="text-stone-400">17:00 - 21:00</p>
-              <p className="font-bold text-[#f39200]">水曜日</p><p className="text-[#f39200]">定休日</p>
-              <p className="font-bold text-stone-200">木曜日</p><p className="text-stone-400">17:00 - 21:00</p>
-              <p className="font-bold text-stone-200">金曜日</p><p className="text-stone-400">17:00 - 22:00</p>
-              <p className="font-bold text-stone-200">土曜日</p><p className="text-stone-400">17:00 - 21:30</p>
-              <p className="font-bold text-stone-200">日曜日</p><p className="text-stone-400">17:00 - 21:00</p>
+            <div className="space-y-4 text-lg">
+              {[
+                { day: "月曜日", hours: ["12:00-15:00", "18:00-22:00"] },
+                { day: "火曜日", hours: ["12:00-15:00", "18:00-22:00"] },
+                { day: "水曜日", hours: ["定休日"], isHoliday: true },
+                { day: "木曜日", hours: ["12:00-15:00", "18:00-22:00"] },
+                { day: "金曜日", hours: ["12:00-15:00", "18:00-22:00"] },
+                { day: "土曜日", hours: ["12:00-15:00", "18:00-22:00"] },
+                { day: "日曜日", hours: ["12:00-15:00", "18:00-22:00"] },
+              ].map((item) => (
+                <div key={item.day} className="flex justify-between items-center border-b border-stone-800/50 pb-2 gap-4">
+                  <span className={`font-bold ${item.isHoliday ? 'text-[#f39200]' : 'text-stone-200'}`}>{item.day}</span>
+                  <div className={`flex flex-col items-end whitespace-nowrap ${item.isHoliday ? 'text-[#f39200]' : 'text-stone-400'}`}>
+                    {item.hours.map((h, i) => <span key={i}>{h}</span>)}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
           <div>

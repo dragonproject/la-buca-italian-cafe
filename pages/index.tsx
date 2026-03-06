@@ -170,15 +170,25 @@ const Home = () => {
               <p>焼きたてのパンの香りと、変わらない笑顔でお迎えします。</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6 text-lg border-t border-stone-800 pt-12">
-              <div className="space-y-4">
-                <p className="flex justify-between border-b border-stone-800/50 pb-2"><span className="font-semibold text-stone-200">月曜 - 火曜</span> <span className="text-stone-400">17:00 - 21:00</span></p>
-                <p className="flex justify-between border-b border-stone-800/50 pb-2"><span className="font-semibold text-[#f39200]">水曜</span> <span className="text-[#f39200]">定休日</span></p>
-                <p className="flex justify-between border-b border-stone-800/50 pb-2"><span className="font-semibold text-stone-200">木曜</span> <span className="text-stone-400">17:00 - 21:00</span></p>
-              </div>
-              <div className="space-y-4">
-                <p className="flex justify-between border-b border-stone-800/50 pb-2"><span className="font-semibold text-stone-200">金曜</span> <span className="text-stone-400">17:00 - 22:00</span></p>
-                <p className="flex justify-between border-b border-stone-800/50 pb-2"><span className="font-semibold text-stone-200">土曜</span> <span className="text-stone-400">17:00 - 21:30</span></p>
-                <p className="flex justify-between border-b border-stone-800/50 pb-2"><span className="font-semibold text-stone-200">日曜</span> <span className="text-stone-400">17:00 - 21:00</span></p>
+              <div className="space-y-4 text-lg">
+                <div className="flex justify-between items-center border-b border-stone-800/50 pb-2 gap-4">
+                  <span className="font-semibold text-stone-200">月曜 - 火曜</span>
+                  <div className="flex flex-col items-end text-stone-400 whitespace-nowrap">
+                    <span>12:00-15:00</span>
+                    <span>18:00-22:00</span>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center border-b border-stone-800/50 pb-2 gap-4">
+                  <span className="font-semibold text-[#f39200]">水曜</span>
+                  <span className="text-[#f39200]">定休日</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-stone-800/50 pb-2 gap-4">
+                  <span className="font-semibold text-stone-200">木曜 - 日曜</span>
+                  <div className="flex flex-col items-end text-stone-400 whitespace-nowrap">
+                    <span>12:00-15:00</span>
+                    <span>18:00-22:00</span>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="pt-8 text-center lg:text-left">
