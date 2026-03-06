@@ -13,7 +13,7 @@ const Review = (props: { body: string, name: string, left: boolean, avatar: stri
 
   return (
     <motion.div
-      className={`relative ${wrapperStyle} bg-stone-100 shadow-2xl text-stone-900 p-8 md:p-12 w-full md:w-3/4 max-w-2xl mb-12 border-l-8 border-[#f39200]`}
+      className={`relative ${wrapperStyle} bg-stone-100 shadow-2xl text-stone-900 p-6 md:p-12 w-full md:w-3/4 max-w-2xl border-l-8 border-[#f39200]`}
       initial={left ? { x: 100, opacity: 0 } : { x: -100, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       viewport={{ once: true }}

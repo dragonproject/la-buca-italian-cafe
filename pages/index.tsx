@@ -240,13 +240,13 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="reviews" className="bg-gradient-to-b from-stone-950 via-stone-900 to-black relative py-16 md:py-32 z-10 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[#f39200]/5 rounded-full blur-[120px] pointer-events-none" />
+      <section id="reviews" className="bg-[#1c1917] relative py-4 md:py-32 z-10 overflow-hidden border-t border-white/5">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] bg-[#f39200]/5 rounded-full blur-[150px] pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-6 text-center">
           <span className="handwritten text-[#f39200] text-2xl mb-4 block">Testimonials</span>
-          <h2 className="text-[clamp(2.5rem,10vw,5rem)] mb-24 italic tracking-tighter">お客様の声</h2>
-          <div className="flex flex-col gap-8 md:gap-16">
+          <h2 className="text-[clamp(2.5rem,10vw,5rem)] mb-4 md:mb-24 italic tracking-tighter">お客様の声</h2>
+          <div className="flex flex-col gap-4 md:gap-16">
             <Review
               body="三田の路地裏にある、本当は教えたくない穴場のお店です。仕事終わりにふらっと寄って、自家製パスタとワインで一息つくのが毎週末の楽しみ。気取らないスタッフの方々との会話も心地よく、明日への元気がもらえます。"
               name="佐藤 健一"
@@ -272,7 +272,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="access" className="bg-stone-900 py-16 md:py-32 relative z-10 px-6 border-t border-white/5">
+      <section id="access" className="bg-stone-950 py-16 md:py-32 relative z-10 px-6 border-t border-white/5 shadow-[0_-50px_100px_rgba(0,0,0,0.5)]">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1fr] gap-20 items-center">
           <div className="space-y-12">
             <div>
