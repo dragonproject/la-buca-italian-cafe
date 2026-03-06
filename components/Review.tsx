@@ -19,7 +19,7 @@ const Review = (props: { body: string, name: string, left: boolean, title?: stri
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <div className="flex flex-col gap-6">
-        <p className="text-xl leading-relaxed italic text-stone-700">"{body}"</p>
+        <p className="text-xl leading-relaxed italic text-stone-700">&quot;{body}&quot;</p>
         <div className="mt-4 text-right">
           <p className="font-bold text-2xl text-stone-900">{name}</p>
           {title && <p className="text-sm text-[#f39200] font-bold mt-1 tracking-widest uppercase">{title}</p>}
