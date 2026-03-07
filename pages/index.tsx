@@ -47,8 +47,8 @@ const Home = () => {
             >
               <Image
                 src={images[index]}
-                layout="fill"
-                objectFit="cover"
+                fill={true}
+                style={{ objectFit: "cover" }}
                 priority
                 alt="Background"
               />
