@@ -1,6 +1,7 @@
 import Map from "@/components/Map";
 import Review from "@/components/Review";
 import SectionHeader from "@/components/SectionHeader";
+import Avatar from "@/components/Avatar";
 import Link from "next/link";
 import Image from "next/image";
 // framer-motion: アニメーションを簡単に実装できるライブラリ
@@ -54,8 +55,8 @@ const Home = () => {
             </motion.div>
           </AnimatePresence>
           {/* オーバーレイ：画像を以前より明るく調整して視認性を向上 */}
-          <div className="absolute inset-0 bg-black/40 z-[1]" />
-          <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-stone-950/80 to-transparent z-[2]" />
+          <div className="absolute inset-0 bg-black/40 z-1" />
+          <div className="absolute inset-x-0 bottom-0 h-48 bg-linear-to-t from-stone-950/80 to-transparent z-2" />
         </div>
 
         {/* センターコンテンツ：ロゴやメインキャッチコピー */}
@@ -63,19 +64,22 @@ const Home = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="w-[80%] max-w-md bg-transparent backdrop-blur-xl px-8 py-10 md:px-10 md:py-12 flex flex-col justify-center items-center shadow-[0_0_100px_rgba(0,0,0,0.5)] rounded-[3rem] z-10 text-center border border-white/10 my-8 md:my-0"
+          className="w-[90%] max-w-md bg-transparent backdrop-blur-xl px-8 py-10 md:px-10 md:py-12 flex flex-col justify-center items-center shadow-[0_0_100px_rgba(0,0,0,0.5)] rounded-[3rem] z-10 text-center border border-white/10 my-8 md:my-0"
         >
           <span className="handwritten text-primary text-2xl md:text-3xl mb-4 italic">Benvenuti</span>
-          {/* ロゴ：丸み(rounded)とブレンディング(mix-blend)で洗練された印象に */}
-          <div className="relative mb-6 md:mb-8 drop-shadow-2xl shadow-2xl overflow-hidden rounded-full w-36 h-36 md:w-44 md:h-44 sm:w-[256px] sm:h-[256px] flex items-center justify-center bg-white">
-            <motion.div
-              animate={{ scale: [1, 1.03, 1] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="w-full h-full relative"
-            >
-              <Image src="/images/logo_dynamic.png" alt="La Buca Logo" layout="fill" objectFit="contain" className="scale-110" />
-            </motion.div>
-          </div>
+          {/* ロゴ：統一されたAvatarコンポーネントを使用 */}
+          <Avatar
+            src="/images/logo_dynamic.png"
+            alt="La Buca Logo"
+            size="hero"
+            bgColor="bg-white"
+            shadow="drop-shadow-2xl shadow-2xl"
+            pulse={true}
+            objectFit="contain"
+            imageScale={1.1}
+            className="mb-6 md:mb-8"
+            borderWidth="border-none"
+          />
           <h1 className="mb-6 text-4xl md:text-6xl lowercase italic text-primary font-serif">la buca</h1>
           <p className="text-lg md:text-xl font-light tracking-[0.4em] uppercase text-stone-100 mb-2">
             三田の街角、手作りの温もり。
@@ -108,7 +112,7 @@ const Home = () => {
           className="absolute bottom-10 flex flex-col items-center gap-2 z-20"
         >
           <span className="handwritten text-primary text-xl">Scroll</span>
-          <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent" />
+          <div className="w-px h-12 bg-linear-to-b from-primary to-transparent" />
         </motion.div>
       </section>
 
@@ -122,7 +126,7 @@ const Home = () => {
             className="relative"
           >
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl" />
-            <div className="relative w-full aspect-[4/3] rounded-[2.5rem] shadow-2xl overflow-hidden z-10 grayscale-[0.2] sepia-[0.1]">
+            <div className="relative w-full aspect-4/3 rounded-[2.5rem] shadow-2xl overflow-hidden z-10 grayscale-[0.2] sepia-[0.1]">
               <Image
                 src="/images/aboutpageimage02.jpg"
                 fill={true}
@@ -195,7 +199,7 @@ const Home = () => {
                 alt="Dining Experience at La Buca"
                 className="transition-transform duration-1000 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-8 md:p-12">
+              <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent flex items-end p-8 md:p-12">
                 <p className="text-white text-lg md:text-2xl font-serif font-medium leading-relaxed tracking-wider drop-shadow-lg">
                   湯気の向こうに、弾む声。<br />
                   今宵も三田の路地裏で、<br />
@@ -223,8 +227,8 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div whileHover={{ y: -10 }} className="group relative h-[600px] rounded-3xl overflow-hidden border border-stone-800">
-              <Image src="/dish1.jpg" alt="Signature Dish" layout="fill" objectFit="cover" className="transition-transform duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
+              <Image src="/dish1.jpg" alt="Signature Dish" fill={true} style={{ objectFit: "cover" }} className="transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-linear-to-t from-stone-950 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
               <div className="absolute bottom-8 left-8 right-8">
                 <p className="text-primary text-sm uppercase tracking-widest mb-2 font-bold">自慢のパスタ</p>
                 <h3 className="text-3xl text-white m-0 border-none p-0">自家製タリアテッレ</h3>
@@ -232,19 +236,19 @@ const Home = () => {
             </motion.div>
 
             <motion.div whileHover={{ y: -10 }} className="group relative h-[600px] rounded-3xl overflow-hidden border border-stone-800 md:mt-12">
-              <Image src="/dish2.jpg" alt="Signature Dish" layout="fill" objectFit="cover" className="transition-transform duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
+              <Image src="/dish2.jpg" alt="Signature Dish" fill={true} style={{ objectFit: "cover" }} className="transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-linear-to-t from-stone-950 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
               <div className="absolute bottom-8 left-8 right-8">
-                <p className="text-[#f39200] text-sm uppercase tracking-widest mb-2 font-bold">メイン料理</p>
+                <p className="text-primary text-sm uppercase tracking-widest mb-2 font-bold">メイン料理</p>
                 <h3 className="text-3xl text-white m-0 border-none p-0">ポレンタと豚肉のロースト</h3>
               </div>
             </motion.div>
 
             <motion.div whileHover={{ y: -10 }} className="group relative h-[600px] rounded-3xl overflow-hidden border border-stone-800">
-              <Image src="/interior.jpg" alt="Restaurant Interior" layout="fill" objectFit="cover" className="transition-transform duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
+              <Image src="/interior.jpg" alt="Restaurant Interior" fill={true} style={{ objectFit: "cover" }} className="transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-linear-to-t from-stone-950 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
               <div className="absolute bottom-8 left-8 right-8">
-                <p className="text-[#f39200] text-sm uppercase tracking-widest mb-2 font-bold">空間・おもてなし</p>
+                <p className="text-primary text-sm uppercase tracking-widest mb-2 font-bold">空間・おもてなし</p>
                 <h3 className="text-3xl text-white m-0 border-none p-0">温かみのある癒しの時間</h3>
               </div>
             </motion.div>
@@ -276,6 +280,7 @@ const Home = () => {
               title="主婦"
               left={true}
               avatar="/images/avatar2.png"
+              imageScale={1.35}
             />
             <Review
               body="散歩のついでに立ち寄ることが多いのですが、いつ行っても温かく迎えてくれます。丁寧な手仕事が伝わる料理はどれも優しくて、店主の温かい人柄がそのまま味に出ているようです。ずっと通い続けたいお店です。"
