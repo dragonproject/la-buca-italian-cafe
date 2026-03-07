@@ -63,7 +63,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="w-[70%] max-w-md bg-transparent backdrop-blur-xl px-8 py-10 md:px-10 md:py-12 flex flex-col justify-center items-center shadow-[0_0_100px_rgba(0,0,0,0.5)] rounded-[3rem] z-10 text-center border border-white/10 my-8 md:my-0"
+          className="w-[80%] max-w-md bg-transparent backdrop-blur-xl px-8 py-10 md:px-10 md:py-12 flex flex-col justify-center items-center shadow-[0_0_100px_rgba(0,0,0,0.5)] rounded-[3rem] z-10 text-center border border-white/10 my-8 md:my-0"
         >
           <span className="handwritten text-primary text-2xl md:text-3xl mb-4 italic">Benvenuti</span>
           {/* ロゴ：丸み(rounded)とブレンディング(mix-blend)で洗練された印象に */}
