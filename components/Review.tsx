@@ -16,7 +16,7 @@ const Review = (props: { body: string, name: string, left: boolean, avatar: stri
       className={`relative ${wrapperStyle} bg-stone-100 shadow-2xl text-stone-900 p-6 md:p-12 w-full md:w-3/4 max-w-2xl border-l-8 border-[#f39200]`}
       initial={left ? { x: 100, opacity: 0 } : { x: -100, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
-      viewport={{ once: true }}
+      viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <div className="flex flex-col md:flex-row gap-8 items-center md:items-start text-left">
