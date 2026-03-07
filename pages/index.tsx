@@ -63,11 +63,11 @@ const Home = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="w-[90%] max-w-md bg-stone-900/20 backdrop-blur-3xl px-10 py-12 md:py-12 flex flex-col justify-center items-center shadow-[0_0_100px_rgba(0,0,0,0.5)] rounded-[3rem] z-10 text-center border border-white/10 my-8 md:my-0"
+          className="w-[70%] max-w-md bg-transparent backdrop-blur-xl px-8 py-10 md:px-10 md:py-12 flex flex-col justify-center items-center shadow-[0_0_100px_rgba(0,0,0,0.5)] rounded-[3rem] z-10 text-center border border-white/10 my-8 md:my-0"
         >
-          <span className="handwritten text-primary text-3xl mb-4 italic">Benvenuti</span>
+          <span className="handwritten text-primary text-2xl md:text-3xl mb-4 italic">Benvenuti</span>
           {/* ロゴ：丸み(rounded)とブレンディング(mix-blend)で洗練された印象に */}
-          <div className="relative mb-8 drop-shadow-2xl shadow-2xl overflow-hidden rounded-full w-44 h-44 sm:w-[256px] sm:h-[256px] flex items-center justify-center bg-white">
+          <div className="relative mb-6 md:mb-8 drop-shadow-2xl shadow-2xl overflow-hidden rounded-full w-36 h-36 md:w-44 md:h-44 sm:w-[256px] sm:h-[256px] flex items-center justify-center bg-white">
             <motion.div
               animate={{ scale: [1, 1.03, 1] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
@@ -76,8 +76,8 @@ const Home = () => {
               <Image src="/images/logo_dynamic.png" alt="La Buca Logo" layout="fill" objectFit="contain" className="scale-110" />
             </motion.div>
           </div>
-          <h1 className="mb-6 text-5xl md:text-6xl lowercase italic text-primary font-serif">la buca</h1>
-          <p className="text-xl md:text-xl font-light tracking-[0.4em] uppercase text-stone-100 mb-2">
+          <h1 className="mb-6 text-4xl md:text-6xl lowercase italic text-primary font-serif">la buca</h1>
+          <p className="text-lg md:text-xl font-light tracking-[0.4em] uppercase text-stone-100 mb-2">
             三田の街角、手作りの温もり。
           </p>
           {/* アクションボタン：ユーザーを特定ページへ誘導 */}
