@@ -144,6 +144,9 @@ const Home = () => {
               subtitle="Our Philosophy"
               title={<>手仕事の温もりを、<br />もっと身近に。</>}
               subtitleClassName="mb-1"
+              titleClassName="md:text-[3.2rem] lg:text-[3.8rem]"
+              className="mb-10 md:mb-16"
+              dark={true}
             />
             <div className="space-y-6 text-lg leading-relaxed font-light opacity-90">
               <p>
