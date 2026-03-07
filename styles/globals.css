@@ -1,20 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=Dancing+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=Dancing+Script&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #f39200;
+  --color-warm-bg: #fbf9f4;
+  --color-warm-text: #4a3e3e;
+}
 
 @layer base {
   html {
     @apply text-stone-100 bg-stone-950;
-    font-family: 'Noto Sans JP', 'Inter', sans-serif;
+    font-family: "Noto Sans JP", "Inter", sans-serif;
     scroll-behavior: smooth;
   }
 
   h1,
   h2,
   h3 {
-    font-family: 'Playfair Display', 'Noto Serif JP', serif;
+    font-family: "Playfair Display", "Noto Serif JP", serif;
   }
 
   h1 {
@@ -36,8 +40,8 @@
   }
 
   .nav-link::after {
-    content: '';
-    @apply absolute bottom--1 left-0 w-0 h-0.5 bg-[#f39200] transition-all duration-300;
+    content: "";
+    @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
   }
 
   .nav-link:hover::after {
@@ -66,7 +70,6 @@
   }
 }
 
-
 .grain-overlay {
   position: fixed;
   top: -50%;
@@ -75,68 +78,66 @@
   bottom: -50%;
   width: 200%;
   height: 200%;
-  background: transparent url('http://assets.iceablethemes.com/img/noise-transparent.png') repeat 0 0;
+  background: transparent
+    url("http://assets.iceablethemes.com/img/noise-transparent.png") repeat 0 0;
   background-repeat: repeat;
   animation: grain 8s steps(10) infinite;
-  opacity: .05;
+  opacity: 0.05;
   pointer-events: none;
   z-index: 9999;
 }
 
 @keyframes grain {
-
   0%,
   100% {
-    transform: translate(0, 0)
+    transform: translate(0, 0);
   }
 
   10% {
-    transform: translate(-5%, -10%)
+    transform: translate(-5%, -10%);
   }
 
   20% {
-    transform: translate(-15%, 5%)
+    transform: translate(-15%, 5%);
   }
 
   30% {
-    transform: translate(7%, -25%)
+    transform: translate(7%, -25%);
   }
 
   40% {
-    transform: translate(-5%, 25%)
+    transform: translate(-5%, 25%);
   }
 
   50% {
-    transform: translate(-15%, 10%)
+    transform: translate(-15%, 10%);
   }
 
   60% {
-    transform: translate(15%, 0%)
+    transform: translate(15%, 0%);
   }
 
   70% {
-    transform: translate(0%, 15%)
+    transform: translate(0%, 15%);
   }
 
   80% {
-    transform: translate(3%, 35%)
+    transform: translate(3%, 35%);
   }
 
   90% {
-    transform: translate(-10%, 10%)
+    transform: translate(-10%, 10%);
   }
 }
 
 .handwritten {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
 }
 
 .warm-bg {
-  background-color: #fbf9f4;
-  /* Warm Cream */
+  @apply bg-warm-bg;
 }
 
 .warm-text {
-  color: #4a3e3e;
-  /* Deep Warm Stone */
+  @apply text-warm-text;
 }

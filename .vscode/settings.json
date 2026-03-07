@@ -5,7 +5,17 @@
         "Buca",
         "Entrata",
         "menupageimage",
+        "Noto",
+        "Playfair",
         "Primi",
-        "toppageimage"
-    ]
+        "toppageimage",
+        "vercel"
+    ],
+    "cSpell.ignoreWords": [
+        "AIzaSyABGsCfvz2E6KsmLkqzewSdJJ6feKoozmk"
+    ],
+    "css.lint.unknownAtRules": "ignore",
+    "files.associations": {
+      "*.css": "tailwindcss"
+    }
 }

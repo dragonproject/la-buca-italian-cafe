@@ -1,5 +1,6 @@
 import Map from "@/components/Map";
 import Review from "@/components/Review";
+import SectionHeader from "@/components/SectionHeader";
 import Link from "next/link";
 import Image from "next/image";
 // framer-motion: アニメーションを簡単に実装できるライブラリ
@@ -29,7 +30,7 @@ const Home = () => {
   }, [images.length]);
 
   return (
-    <article className="overflow-x-hidden selection:bg-[#f39200]/30 text-stone-100">
+    <article className="overflow-x-hidden selection:bg-primary/30 text-stone-100">
       {/* ヒーローセクション：Webサイトの最上部、最初に目が触れるエリア */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20 md:py-0">
         {/* 背景カルーセル：画像がふわっと切り替わる仕組み */}
@@ -62,11 +63,11 @@ const Home = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="w-[90%] max-w-2xl bg-stone-900/20 backdrop-blur-3xl px-10 py-12 md:py-20 flex flex-col justify-center items-center shadow-[0_0_100px_rgba(0,0,0,0.5)] rounded-[3rem] z-10 text-center border border-white/10 my-8 md:my-0"
+          className="w-[90%] max-w-md bg-stone-900/20 backdrop-blur-3xl px-10 py-12 md:py-12 flex flex-col justify-center items-center shadow-[0_0_100px_rgba(0,0,0,0.5)] rounded-[3rem] z-10 text-center border border-white/10 my-8 md:my-0"
         >
-          <span className="handwritten text-[#f39200] text-3xl mb-4 italic">Benvenuti</span>
+          <span className="handwritten text-primary text-3xl mb-4 italic">Benvenuti</span>
           {/* ロゴ：丸み(rounded)とブレンディング(mix-blend)で洗練された印象に */}
-          <div className="relative mb-10 drop-shadow-2xl shadow-2xl overflow-hidden rounded-full w-56 h-56 sm:w-[500px] sm:h-[500px] flex items-center justify-center bg-white">
+          <div className="relative mb-8 drop-shadow-2xl shadow-2xl overflow-hidden rounded-full w-44 h-44 sm:w-[256px] sm:h-[256px] flex items-center justify-center bg-white">
             <motion.div
               animate={{ scale: [1, 1.03, 1] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
@@ -75,8 +76,8 @@ const Home = () => {
               <Image src="/images/logo_dynamic.png" alt="La Buca Logo" layout="fill" objectFit="contain" className="scale-110" />
             </motion.div>
           </div>
-          <h1 className="mb-6 text-5xl md:text-8xl lowercase italic text-[#f39200] font-serif">la buca</h1>
-          <p className="text-xl md:text-2xl font-light tracking-[0.4em] uppercase text-stone-100 mb-2">
+          <h1 className="mb-6 text-5xl md:text-6xl lowercase italic text-primary font-serif">la buca</h1>
+          <p className="text-xl md:text-xl font-light tracking-[0.4em] uppercase text-stone-100 mb-2">
             三田の街角、手作りの温もり。
           </p>
           {/* アクションボタン：ユーザーを特定ページへ誘導 */}
@@ -85,7 +86,7 @@ const Home = () => {
               href="#story"
               whileHover={{ scale: 1.02, backgroundColor: "#d98300" }}
               whileTap={{ scale: 0.98 }}
-              className="flex-1 bg-[#f39200] text-stone-950 px-8 py-5 rounded-2xl font-bold transition-shadow text-center shadow-lg hover:shadow-[#f39200]/40"
+              className="flex-1 bg-primary text-stone-950 px-8 py-5 rounded-2xl font-bold transition-shadow text-center shadow-lg hover:shadow-primary/40"
             >
               La Bucaのこだわり
             </motion.a>
@@ -93,7 +94,7 @@ const Home = () => {
               href="#access"
               whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.1)" }}
               whileTap={{ scale: 0.98 }}
-              className="flex-1 border-2 border-white/20 hover:border-[#f39200] text-stone-100 px-8 py-5 rounded-2xl font-bold transition-all text-center"
+              className="flex-1 border-2 border-white/20 hover:border-primary text-stone-100 px-8 py-5 rounded-2xl font-bold transition-all text-center"
             >
               アクセス・営業時間
             </motion.a>
@@ -106,8 +107,8 @@ const Home = () => {
           transition={{ duration: 2, repeat: Infinity }}
           className="absolute bottom-10 flex flex-col items-center gap-2 z-20"
         >
-          <span className="handwritten text-[#f39200] text-xl">Scroll</span>
-          <div className="w-px h-12 bg-gradient-to-b from-[#f39200] to-transparent" />
+          <span className="handwritten text-primary text-xl">Scroll</span>
+          <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent" />
         </motion.div>
       </section>
 
@@ -120,17 +121,17 @@ const Home = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#f39200]/10 rounded-full blur-3xl" />
-            <div className="relative w-full aspect-[4/3] rounded-[2.5rem] shadow-2xl overflow-hidden relative z-10 grayscale-[0.2] sepia-[0.1]">
+            <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl" />
+            <div className="relative w-full aspect-[4/3] rounded-[2.5rem] shadow-2xl overflow-hidden z-10 grayscale-[0.2] sepia-[0.1]">
               <Image
                 src="/images/aboutpageimage02.jpg"
-                layout="fill"
-                objectFit="cover"
+                fill={true}
+                style={{ objectFit: "cover" }}
                 alt="Handmade Pasta"
               />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl z-20 md:block hidden">
-              <span className="handwritten text-[#f39200] text-4xl">Since 2002</span>
+              <span className="handwritten text-primary text-4xl">Since 2002</span>
             </div>
           </motion.div>
           <motion.div
@@ -139,8 +140,11 @@ const Home = () => {
             viewport={{ once: true }}
             className="warm-text"
           >
-            <span className="handwritten text-[#f39200] text-2xl mb-4 block">Our Philosophy</span>
-            <h2 className="text-[clamp(2.5rem,10vw,5rem)] mb-8 leading-[1.2] font-bold tracking-tighter">手仕事の温もりを、<br />もっと身近に。</h2>
+            <SectionHeader
+              subtitle="Our Philosophy"
+              title={<>手仕事の温もりを、<br />もっと身近に。</>}
+              subtitleClassName="mb-1"
+            />
             <div className="space-y-6 text-lg leading-relaxed font-light opacity-90">
               <p>
                 三田の街角で、毎日通いたくなるような「気軽で元気が出る味」を目指しています。
@@ -155,7 +159,7 @@ const Home = () => {
               </p>
             </div>
             <div className="mt-12">
-              <span className="handwritten text-[#f39200] text-5xl">Chef & Staff</span>
+              <span className="handwritten text-primary text-5xl">Chef & Staff</span>
             </div>
           </motion.div>
         </div>
@@ -165,11 +169,13 @@ const Home = () => {
       <section id="experience" className="bg-stone-900 section-padding">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[4fr_6fr] section-gap items-center">
           <div className="space-y-8">
-            <span className="handwritten text-[#f39200] text-2xl block">Find Us</span>
-            <h2 className="text-[clamp(2.5rem,10vw,5rem)] !leading-[1.2] tracking-tighter uppercase mb-12">
-              三田で愛される<br /><span className="text-[#f39200]">街のイタリアン</span>
-            </h2>
-            <div className="space-y-4 text-lg font-light text-stone-400 leading-relaxed italic border-l-2 border-[#f39200]/30 pl-6 mb-8 lg:mb-12">
+            <SectionHeader
+              subtitle="Find Us"
+              title={<>三田で愛される<br /><span className="text-primary">街のイタリアン</span></>}
+              subtitleClassName="mb-1"
+              titleClassName="uppercase"
+            />
+            <div className="space-y-4 text-lg font-light text-stone-400 leading-relaxed italic border-l-2 border-primary/30 pl-6 mb-8 lg:mb-12">
               <p>三田の喧騒を少し離れた、静かな路地裏。</p>
               <p>オレンジ色の灯りが漏れるそのドアが、私たちの目印です。</p>
               <p>わざわざ足を運んでくださるあなたを、</p>
@@ -177,12 +183,12 @@ const Home = () => {
             </div>
           </div>
           <div className="relative group">
-            <div className="absolute -inset-4 bg-[#f39200]/10 rounded-[3rem] blur-2xl group-hover:bg-[#f39200]/20 transition-all duration-700" />
+            <div className="absolute -inset-4 bg-primary/10 rounded-[3rem] blur-2xl group-hover:bg-primary/20 transition-all duration-700" />
             <div className="relative h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5">
               <Image
                 src="/images/experience_dining.png"
-                layout="fill"
-                objectFit="cover"
+                fill={true}
+                style={{ objectFit: "cover" }}
                 alt="Dining Experience at La Buca"
                 className="transition-transform duration-1000 group-hover:scale-105"
               />
@@ -201,12 +207,15 @@ const Home = () => {
       <section id="dishes" className="bg-stone-950 section-padding overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-            <div className="max-w-2xl">
-              <span className="handwritten text-[#f39200] text-2xl mb-4 block">Signature Selection</span>
-              <h2 className="text-[clamp(2.5rem,10vw,5rem)] mb-6 leading-[1.2] tracking-tighter">こだわりの <span className="text-[#f39200]">看板料理</span></h2>
-              <p className="text-xl text-stone-400 font-light">地元の新鮮な食材と厳選された輸入品を使用し、シェフが心を込めて作り上げる伝統的なイタリア料理の数々をご堪能ください。</p>
+            <div className="max-w-2xl text-left">
+              <SectionHeader
+                subtitle="Signature Selection"
+                title={<>こだわりの <span className="text-primary">看板料理</span></>}
+                subtitleClassName="mb-1"
+              />
+              <p className="text-xl text-stone-400 font-light mt-6">地元の新鮮な食材と厳選された輸入品を使用し、シェフが心を込めて作り上げる伝統的なイタリア料理の数々をご堪能ください。</p>
             </div>
-            <Link href="/menu" className="text-[#f39200] border-b border-[#f39200] pb-1 hover:text-white hover:border-white transition-all text-lg tracking-widest uppercase">全メニューを見る</Link>
+            <Link href="/menu" className="text-primary border-b border-primary pb-1 hover:text-white hover:border-white transition-all text-lg tracking-widest uppercase mb-4">全メニューを見る</Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -214,7 +223,7 @@ const Home = () => {
               <Image src="/dish1.jpg" alt="Signature Dish" layout="fill" objectFit="cover" className="transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
               <div className="absolute bottom-8 left-8 right-8">
-                <p className="text-[#f39200] text-sm uppercase tracking-widest mb-2 font-bold">自慢のパスタ</p>
+                <p className="text-primary text-sm uppercase tracking-widest mb-2 font-bold">自慢のパスタ</p>
                 <h3 className="text-3xl text-white m-0 border-none p-0">自家製タリアテッレ</h3>
               </div>
             </motion.div>
@@ -241,12 +250,16 @@ const Home = () => {
       </section>
 
       <section id="reviews" className="bg-[#1c1917] section-padding-tight overflow-hidden border-t border-white/5">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] bg-[#f39200]/5 rounded-full blur-[150px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <span className="handwritten text-[#f39200] text-2xl mb-4 block">Testimonials</span>
-          <h2 className="text-[clamp(2.5rem,10vw,5rem)] mb-4 md:mb-24 italic tracking-tighter">お客様の声</h2>
-          <div className="flex flex-col section-gap-tight">
+          <SectionHeader
+            subtitle="Testimonials"
+            title="お客様の声"
+            align="center"
+            titleClassName="italic mb-2"
+          />
+          <div className="flex flex-col section-gap-tight mt-12 md:mt-24">
             <Review
               body="三田の路地裏にある、本当は教えたくない穴場のお店です。仕事終わりにふらっと寄って、自家製パスタとワインで一息つくのが毎週末の楽しみ。気取らないスタッフの方々との会話も心地よく、明日への元気がもらえます。"
               name="佐藤 健一"
@@ -276,9 +289,13 @@ const Home = () => {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1fr] section-gap items-center">
           <div className="space-y-12">
             <div>
-              <span className="handwritten text-[#f39200] text-2xl mb-4 block">Hours & Location</span>
-              <h2 className="text-[clamp(2.5rem,10vw,5rem)] font-bold mb-12 tracking-tighter">営業時間・アクセス</h2>
-              <div className="space-y-4 text-base md:text-xl">
+              <SectionHeader
+                subtitle="Hours & Location"
+                title="営業時間・アクセス"
+                subtitleClassName="mb-1"
+                titleClassName="md:text-5xl"
+              />
+              <div className="mt-10 md:mt-16 space-y-4 text-base md:text-xl">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-stone-800 pb-3 gap-2">
                   <span className="font-bold text-stone-200">月曜 - 火曜</span>
                   <div className="flex items-center text-stone-400 gap-3">
@@ -288,8 +305,8 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="flex justify-between items-center border-b border-stone-800 pb-3">
-                  <span className="font-bold text-[#f39200]">水曜</span>
-                  <span className="text-[#f39200]">定休日</span>
+                  <span className="font-bold text-primary">水曜</span>
+                  <span className="text-primary">定休日</span>
                 </div>
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-stone-800 pb-3 gap-2">
                   <span className="font-bold text-stone-200">木曜 - 日曜</span>
@@ -305,7 +322,7 @@ const Home = () => {
             <div className="bg-stone-800/30 p-8 rounded-3xl border border-white/5">
               <p className="text-stone-300 text-xl mb-6">東京都港区三田 1-2-3</p>
               <Link href="https://www.google.com/maps/search/?api=1&query=東京都港区三田1-2-3"
-                className="bg-[#f39200] text-stone-950 px-10 py-4 rounded-xl font-bold hover:bg-[#d98300] transition-all inline-block shadow-lg">
+                className="bg-primary text-stone-950 px-10 py-4 rounded-xl font-bold hover:bg-[#d98300] transition-all inline-block shadow-lg">
                 Googleマップで開く
               </Link>
             </div>
