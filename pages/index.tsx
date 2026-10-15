@@ -235,7 +235,7 @@ const Home = () => {
               </div>
             </motion.div>
 
-            <motion.div whileHover={{ y: -10 }} className="group relative h-[600px] rounded-3xl overflow-hidden border border-stone-800 md:mt-12">
+            <motion.div whileHover={{ y: -10 }} className="group relative h-[600px] rounded-3xl overflow-hidden border border-stone-800">
               <Image src="/dish2.jpg" alt="Signature Dish" fill={true} style={{ objectFit: "cover" }} className="transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-linear-to-t from-stone-950 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
               <div className="absolute bottom-8 left-8 right-8">
