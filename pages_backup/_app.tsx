@@ -1,0 +1,132 @@
+import '../styles/globals.css';
+import type { AppProps } from 'next/app';
+import Link from 'next/link';
+import Head from 'next/head';
+import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+config.autoAddCss = false;
+
+import { LoadScript } from '@react-google-maps/api';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+
+export default function App({ Component, pageProps }: AppProps) {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const router = useRouter();
+
+  // ページ遷移時にモバイルメニューを自動で閉じる
+  useEffect(() => {
+    setIsNavOpen(false);
+  }, [router.asPath]);
+
+  // モバイルメニュー表示時に背面のスクロールを抑制（オプション）
+  useEffect(() => {
+    if (isNavOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isNavOpen]);
+
+  const toggleNav = () => setIsNavOpen((prev) => !prev);
+  const closeNav = () => setIsNavOpen(false);
+
+  return (
+    <div className="flex flex-col min-h-screen selection:bg-primary/30 selection:text-white bg-stone-950 font-sans">
+      <Head>
+        <title>La Buca | 三田の街角で味わう手作りイタリアン</title>
+        <meta name="description" content="港区三田の隠れ家イタリアンLa Buca（ラ・ブカ）。シェフの温もり伝わる手打ちパスタと、ご近所さんのような親しみやすいおもてなしで、至福のひとときをご提供します。" />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+      <div className="grain-overlay" />
+      <header className='fixed top-0 left-0 right-0 bg-stone-900/80 backdrop-blur-xl flex justify-between items-center px-6 md:px-12 py-4 z-50 border-b border-white/5'>
+        <Link href="/" className='flex items-center gap-3 group' onClick={closeNav}>
+          <div className="relative w-14 h-14 rounded-full overflow-hidden group-hover:scale-110 transition-transform">
+            <Image src="/images/logo_dynamic.png" alt="Logo" fill className="object-contain" priority />
+          </div>
+          <span className='text-3xl font-serif lowercase italic text-primary group-hover:text-white transition-colors tracking-tight'>la buca</span>
+        </Link>
+
+        {/* ハンバーガーボタン */}
+        <button
+          type="button"
+          onClick={toggleNav}
+          aria-expanded={isNavOpen}
+          aria-label={isNavOpen ? "メニューを閉じる" : "メニューを開く"}
+          className="z-50 border-none bg-transparent hover:scale-110 transition-transform md:hidden text-stone-100 p-2 focus:outline-none"
+        >
+          <FontAwesomeIcon icon={isNavOpen ? faXmark : faBars} className="text-2xl" />
+        </button>
+
+        {/* モバイル用背景オーバーレイ（外側タップで閉じる） */}
+        {isNavOpen && (
+          <div
+            onClick={closeNav}
+            aria-hidden="true"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-30 md:hidden"
+          />
+        )}
+
+        {/* ナビゲーションメニュー */}
+        <nav
+          className={`
+            absolute top-full left-0 right-0 z-40 flex flex-col items-center bg-stone-900/95 py-10 transition-all duration-300 origin-top shadow-2xl
+            md:static md:flex-row md:gap-12 md:py-0 md:bg-transparent md:shadow-none md:transform-none md:opacity-100 md:pointer-events-auto
+            ${isNavOpen 
+              ? 'scale-y-100 opacity-100 pointer-events-auto' 
+              : 'scale-y-0 opacity-0 pointer-events-none'
+            }
+          `}
+        >
+          <Link href="/menu" className="nav-link" onClick={closeNav}>メニュー</Link>
+          <Link href="/catering" className="nav-link" onClick={closeNav}>ケータリング</Link>
+          <Link href="/#reviews" className="nav-link" onClick={closeNav}>お客様の声</Link>
+          <Link href="/contact" className="nav-link text-primary font-bold border border-primary/30 px-6 py-2 rounded-full hover:bg-primary hover:text-stone-950 transition-all" onClick={closeNav}>ご予約・店舗案内</Link>
+        </nav>
+      </header>
+
+      <main className="grow pt-20">
+        <LoadScript googleMapsApiKey={"AIzaSyABGsCfvz2E6KsmLkqzewSdJJ6feKoozmk"}>
+          <Component {...pageProps} />
+        </LoadScript>
+      </main>
+
+      <footer className='bg-stone-950 text-stone-500 py-24 px-6 border-t border-white/5'>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 items-center">
+          <div className="flex flex-col items-center md:items-start space-y-4">
+            <Link href="/" className='text-4xl font-serif lowercase italic text-primary'>la buca</Link>
+            <p className="text-sm font-light tracking-wide max-w-xs text-center md:text-left leading-relaxed text-stone-400">
+              三田の街角で、手作りの味を気軽に。<br />毎日でも通いたくなる、アットホームなイタリアン。
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center space-y-8">
+            <div className="flex gap-10 text-3xl">
+              <Link href="#" className="hover:text-primary transition-colors"><FontAwesomeIcon icon={faFacebook} /></Link>
+              <Link href="#" className="hover:text-primary transition-colors"><FontAwesomeIcon icon={faTwitter} /></Link>
+              <Link href="#" className="hover:text-primary transition-colors"><FontAwesomeIcon icon={faInstagram} /></Link>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center md:items-end space-y-5 text-lg">
+            <Link href="/menu" className="hover:text-white transition-colors">メニュー</Link>
+            <Link href="/contact" className="hover:text-white transition-colors">店舗情報</Link>
+            <Link href="/catering" className="hover:text-white transition-colors">ケータリング</Link>
+            <Link href="/#reviews" className="hover:text-white transition-colors">お客様の声</Link>
+          </div>
+        </div>
+        <div className="mt-20 pt-12 border-t border-white/5 text-center text-[10px] font-medium tracking-[0.3em] uppercase text-stone-700">
+          &copy; {new Date().getFullYear()} La Buca Italian Cafe. お越しを心よりお待ちしております。
+        </div>
+      </footer>
+    </div>
+  )
+}
+
