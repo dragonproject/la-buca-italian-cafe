@@ -65,19 +65,28 @@ export default function Header() {
       {/* ナビゲーションメニュー */}
       <nav
         className={`
-          absolute top-full left-0 right-0 z-40 flex flex-col items-center bg-stone-900/95 py-10 transition-all duration-300 origin-top shadow-2xl
-          md:static md:flex-row md:gap-12 md:py-0 md:bg-transparent md:shadow-none md:transform-none md:opacity-100 md:pointer-events-auto
-          ${isNavOpen 
-            ? 'scale-y-100 opacity-100 pointer-events-auto' 
-            : 'scale-y-0 opacity-0 pointer-events-none'
+          md:flex md:flex-row md:items-center md:gap-8 md:static md:bg-transparent md:p-0 md:shadow-none md:opacity-100 md:scale-y-100 md:pointer-events-auto
+          ${isNavOpen
+            ? 'flex flex-col items-center gap-6 absolute top-full left-0 right-0 bg-stone-900/95 py-10 shadow-2xl z-40 opacity-100 scale-y-100 pointer-events-auto transition-all duration-300 origin-top border-b border-white/5'
+            : 'hidden md:flex'
           }
         `}
       >
-        <Link href="/menu" className="nav-link" onClick={closeNav}>メニュー</Link>
-        <Link href="/catering" className="nav-link" onClick={closeNav}>ケータリング</Link>
-        <Link href="/#reviews" className="nav-link" onClick={closeNav}>お客様の声</Link>
-        <Link href="/contact" className="nav-link text-primary font-bold border border-primary/30 px-6 py-2 rounded-full hover:bg-primary hover:text-stone-950 transition-all" onClick={closeNav}>
-          ご予約・店舗案内
+        <Link href="/menu" className="nav-link" onClick={closeNav}>
+          メニュー
+        </Link>
+        <Link href="/catering" className="nav-link" onClick={closeNav}>
+          ケータリング
+        </Link>
+        <Link href="/#reviews" className="nav-link" onClick={closeNav}>
+          お客様の声
+        </Link>
+        <Link
+          href="/contact"
+          className="nav-link text-primary font-bold border border-primary/40 px-6 py-2 rounded-full hover:bg-primary hover:text-stone-950 transition-all"
+          onClick={closeNav}
+        >
+          コンタクト
         </Link>
       </nav>
     </header>
