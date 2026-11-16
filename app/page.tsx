@@ -382,7 +382,7 @@ const Home = () => {
         id="access"
         className="section-padding border-t border-white/5 bg-stone-950 shadow-[0_-50px_100px_rgba(0,0,0,0.5)]"
       >
-        <div className="section-gap mx-auto grid max-w-7xl items-center lg:grid-cols-[1fr_1fr]">
+        <div className="section-gap mx-auto grid max-w-7xl items-center lg:grid-cols-[5fr_7fr]">
           <div className="space-y-12">
             <div>
               <SectionHeader
@@ -428,7 +428,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="group relative h-150 overflow-hidden rounded-[3rem] border border-stone-800 shadow-2xl">
+          <div className="group relative h-110 sm:h-125 lg:h-140 w-full overflow-hidden rounded-[3rem] border border-stone-800 shadow-2xl">
             <Map />
           </div>
         </div>

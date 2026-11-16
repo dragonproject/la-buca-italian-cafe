@@ -10,9 +10,10 @@ export default function Footer() {
           <Link href="/" className="text-4xl font-serif lowercase italic text-primary">
             la buca
           </Link>
-          <p className="text-sm font-light tracking-wide max-w-xs text-center md:text-left leading-relaxed text-stone-400">
-            三田の街角で、手作りの味を気軽に。<br />
-            毎日でも通いたくなる、アットホームなイタリアン。
+          <p className="text-sm font-light tracking-wide text-center md:text-left leading-relaxed text-stone-400">
+            <span className="whitespace-nowrap">三田の街角で、手作りの味を気軽に。</span>
+            <br />
+            <span className="whitespace-nowrap">毎日でも通いたくなる、アットホームなイタリアン。</span>
           </p>
         </div>
 
